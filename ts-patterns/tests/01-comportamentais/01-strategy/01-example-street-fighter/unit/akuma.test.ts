@@ -23,7 +23,8 @@ describe('Test Akuma', ()=> {
     })
     it('should take damage from enemy after an attack', ()=> {
         const balrog = new Balrog()
+        const expectedLifePoints = 80
         player.attack(balrog)
-        expect(balrog.lifePoints).toEqual(player.strength)
+        expect(balrog.lifePoints).toEqual(expectedLifePoints)
     })
 })
