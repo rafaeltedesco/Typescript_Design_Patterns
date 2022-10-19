@@ -5,8 +5,8 @@ export abstract class FightPlayer extends Player implements IFighter {
     
     lifePoints: number;
     strength: number;
-
     attackName = '';
+    
     constructor(name: string, lifePoints: number, strength: number) {
         super(name)
         this.lifePoints = lifePoints
@@ -22,12 +22,4 @@ export abstract class FightPlayer extends Player implements IFighter {
         this.lifePoints -= attackStrength
         if (this.lifePoints <= 0 ) this.isAlive = false
     }
-
-    get story(): string {
-        throw new Error("Method not implemented.");
-    }
-    protected loadStory(): void {
-        throw new Error("Method not implemented.");
-    }
-
 }
