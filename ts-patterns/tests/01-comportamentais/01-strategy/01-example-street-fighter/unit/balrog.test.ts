@@ -14,7 +14,7 @@ describe('Test Balrog', ()=> {
         expect(player).toHaveProperty('attackName')
         expect(player.attackName).toEqual('Dash Straight')
     })
-    it('should attack antother player with Dash Straight', ()=> {
+    it('should attack another player with Dash Straight', ()=> {
         const akuma = new Akuma()
         expect(player.attack(akuma)).toEqual('Balrog attacks Akuma with Dash Straight!')
     })
