@@ -8,6 +8,6 @@ export class Narrator extends Player {
     }
 
     tellStory(player: IPlayer) {
-        player.tellStory()
+        return player.story
     }
 }
