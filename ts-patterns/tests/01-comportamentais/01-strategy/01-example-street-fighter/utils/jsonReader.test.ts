@@ -1,3 +1,4 @@
+import { readJSONFile } from "../../../../../01-comportamentais/utils/jsonFileReader"
 
 describe('Test JSON reader', ()=> {
     it('should read a JSON file', async()=> {
