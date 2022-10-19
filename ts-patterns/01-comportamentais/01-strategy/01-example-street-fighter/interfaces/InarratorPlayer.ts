@@ -1,4 +1,5 @@
+import { IPlayer } from "./Iplayer";
+
 export interface INarrator {
-    loadStory(): void;
-    story: string;
+    tellStory(player: IPlayer): void
 }
