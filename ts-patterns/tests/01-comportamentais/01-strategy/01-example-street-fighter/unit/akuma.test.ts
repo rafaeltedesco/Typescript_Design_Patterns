@@ -6,4 +6,8 @@ describe('Test Akuma', ()=> {
         const player: Player = new Akuma()
         expect(player.name).toBe('Akuma')
     })
+    it('should attack with Gou-Hadoken', ()=> {
+        const player: Player = new Akuma()
+        expect(player.attack()).toEqual('Akuma attacks with Gou-Hadoken!')
+    })
 })
