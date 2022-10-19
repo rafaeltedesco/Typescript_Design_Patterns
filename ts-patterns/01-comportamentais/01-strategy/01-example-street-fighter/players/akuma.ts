@@ -5,6 +5,6 @@ export class Akuma extends Fighter {
     attackName = 'Gou-Hadoken'
 
     attack(): string {
-        return `${this.name} attacks with Gou-Hadoken!`
+        return `${this.name} attacks with ${this.attackName}!`
     }
 }
