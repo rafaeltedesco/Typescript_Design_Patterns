@@ -5,6 +5,6 @@ export class Balrog implements Player {
     attackName = 'Dash Straight'
    
     attack(): string {
-        throw new Error('Not implemented')
+        return `${this.name} attacks with ${this.attackName}!`
     }
 }
