@@ -1,6 +1,6 @@
 import { IFighter } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/interfaces/Ifighter"
 import { Akuma } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/akuma"
-import { FightPlayer } from "../../../../../01-comportamentais/01-strategy/abstracts/fightPlayer"
+import { FightPlayer } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/abstracts/fightPlayer"
 
 describe('Test Akuma', ()=> {
     

@@ -1,5 +1,5 @@
 
-import { Player } from "../../abstracts/player";
+import { Player } from "../abstracts/player";
 
 export class Narrator extends Player {
     constructor() {

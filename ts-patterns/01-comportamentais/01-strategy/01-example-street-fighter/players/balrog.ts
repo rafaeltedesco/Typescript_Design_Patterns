@@ -1,5 +1,5 @@
 
-import { FightPlayer } from "../../abstracts/fightPlayer";
+import { FightPlayer } from "../abstracts/fightPlayer";
 
 export class Balrog extends FightPlayer {
     

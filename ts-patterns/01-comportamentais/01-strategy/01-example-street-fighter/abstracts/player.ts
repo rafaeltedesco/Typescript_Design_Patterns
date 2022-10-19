@@ -1,4 +1,4 @@
-import { IPlayer } from "../01-example-street-fighter/interfaces/Iplayer";
+import { IPlayer } from "../interfaces/Iplayer";
 
 export abstract class Player implements IPlayer {
     isAlive = true

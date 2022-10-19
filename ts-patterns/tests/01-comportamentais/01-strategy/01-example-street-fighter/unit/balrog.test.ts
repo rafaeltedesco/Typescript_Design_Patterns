@@ -1,6 +1,6 @@
 import { IFighter } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/interfaces/Ifighter"
 import { Balrog } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/balrog"
-import { FightPlayer } from "../../../../../01-comportamentais/01-strategy/abstracts/fightPlayer"
+import { FightPlayer } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/abstracts/fightPlayer"
 
 
 describe('Test Balrog', ()=> {

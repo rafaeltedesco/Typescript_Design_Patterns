@@ -1,4 +1,4 @@
-import { IFighter } from "../01-example-street-fighter/interfaces/Ifighter";
+import { IFighter } from "../interfaces/Ifighter";
 import { Player } from "./player";
 
 export class FightPlayer extends Player implements IFighter {
