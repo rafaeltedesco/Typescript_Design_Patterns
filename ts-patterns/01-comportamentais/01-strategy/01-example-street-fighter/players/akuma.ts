@@ -1,6 +1,6 @@
-import { Player } from "../interfaces/player";
+import { Fighter } from "../../abstracts/fighter";
 
-export class Akuma implements Player {
+export class Akuma extends Fighter {
     name = 'Akuma';
     attackName = 'Gou-Hadoken'
 

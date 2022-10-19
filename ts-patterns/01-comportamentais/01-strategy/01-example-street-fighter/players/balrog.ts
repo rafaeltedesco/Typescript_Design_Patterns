@@ -1,6 +1,6 @@
-import { Player } from "../interfaces/player";
+import { Fighter } from "../../abstracts/fighter";
 
-export class Balrog implements Player {
+export class Balrog extends Fighter {
     name = 'Balrog';
     attackName = 'Dash Straight'
    
