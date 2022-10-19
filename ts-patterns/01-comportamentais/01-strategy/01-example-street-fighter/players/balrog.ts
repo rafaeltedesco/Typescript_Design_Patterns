@@ -5,6 +5,6 @@ export class Balrog extends FightPlayer {
     
     attackName = 'Dash Straight'
     constructor() {
-        super('Balrog')
+        super('Balrog', 100, 40)
     }
 }

@@ -4,6 +4,6 @@ export class Akuma extends FightPlayer {
     attackName = 'Gou-Hadoken'
 
     constructor() {
-        super('Akuma')
+        super('Akuma', 120, 60)
     }
 }
