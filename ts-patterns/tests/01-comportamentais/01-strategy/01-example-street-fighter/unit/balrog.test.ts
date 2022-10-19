@@ -1,4 +1,5 @@
 import { Player } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/interfaces/player"
+import { Balrog } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/balrog"
 
 describe('Test Balrog', ()=> {
     
