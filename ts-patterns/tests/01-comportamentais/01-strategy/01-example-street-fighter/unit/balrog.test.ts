@@ -16,7 +16,7 @@ describe('Test Balrog', ()=> {
     })
     it('should attack antother player with Dash Straight', ()=> {
         const akuma = new Akuma()
-        expect(player.attack(akuma)).toEqual('Balrog attacks with Dash Straight!')
+        expect(player.attack(akuma)).toEqual('Balrog attacks Akuma with Dash Straight!')
     })
     it('should be an instance of a Fighter class', ()=> {
         expect(player).toBeInstanceOf(Fighter)
