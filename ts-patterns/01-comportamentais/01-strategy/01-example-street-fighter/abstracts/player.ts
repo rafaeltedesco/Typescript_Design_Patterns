@@ -7,4 +7,8 @@ export abstract class Player implements IPlayer {
     get name(): string {
         return this._name
     }
+
+    abstract get story(): string;
+
+    protected abstract loadStory(): void;
 }
