@@ -5,7 +5,7 @@ export class Fighter implements Player {
     name = '';
     attackName = '';
     attack(): string {
-        throw new Error("Method not implemented.");
+        return `${this.name} attacks with ${this.attackName}!`
     }
 
 }
