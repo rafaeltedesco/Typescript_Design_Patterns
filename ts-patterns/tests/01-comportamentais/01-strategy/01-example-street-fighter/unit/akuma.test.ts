@@ -29,7 +29,7 @@ describe('Test Akuma', ()=> {
     })
     it('should call method take damage from enemy class when attacks', ()=> {
         const balrog = new Balrog()
-        const balrogSpy = jest.spyOn(balrog, balrog.takeDamage.name)
+        const balrogSpy = jest.spyOn(balrog, "takeDamage")
         player.attack(balrog)
         expect(balrogSpy).toBeCalledTimes(1)
     })
