@@ -12,4 +12,7 @@ describe('Test Balrog', ()=> {
         expect(player).toHaveProperty('attackName')
         expect(player.attackName).toEqual('Dash Straight')
     })
+    it('should attack with Dash Straight', ()=> {
+        expect(player.attack()).toEqual('Balrog attacks with Dash Straight!')
+    })
 })
