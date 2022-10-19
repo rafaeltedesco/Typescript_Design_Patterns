@@ -8,4 +8,8 @@ describe('Test Balrog', ()=> {
     it('should create a player called Balrog', ()=> {
         expect(player.name).toEqual('Balrog')
     })
+    it('should have a property called attackName with Dash Straight as a value', ()=> {
+        expect(player).toHaveProperty('attackName')
+        expect(player.attackName).toEqual('Dash Straight')
+    })
 })
