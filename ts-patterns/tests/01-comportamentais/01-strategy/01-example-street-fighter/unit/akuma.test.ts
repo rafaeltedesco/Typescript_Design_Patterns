@@ -6,7 +6,7 @@ describe('Test Akuma', ()=> {
     const player: Player = new Akuma()
 
     it('should create a player called Akuma', ()=> {
-        expect(player.name).toBe('Akuma')
+        expect(player.name).toEqual('Akuma')
     })
     it('should have a property called attackName with Gou-Hadoken as a value', ()=> {
         expect(player).toHaveProperty('attackName')
