@@ -28,4 +28,10 @@ describe('Test Balrog', ()=> {
         player.attack(akuma)
         expect(akuma.lifePoints).toEqual(expectedLifePoints)
     })
+    it('should call method take damage from enemy class when attacks', ()=> {
+        const akuma = new Akuma()
+        const akumaSpy = jest.spyOn(akuma, akuma.takeDamage.name)
+        player.attack(akuma)
+        expect(akumaSpy).toBeCalledTimes(1)
+    })
 })
