@@ -13,12 +13,12 @@ export class FightPlayer extends Player implements IFighter {
     }
 
     attack(enemy: IFighter): string {
-        
+        enemy.takeDamage(this.strength)
         return `${this.name} attacks ${enemy.name} with ${this.attackName}!`
     }
 
-    takeDamage(enemy: IFighter): void {
-        enemy.lifePoints -= this.strength
+    takeDamage(attackStrength: number): void {
+        this.lifePoints -= attackStrength
     }
 
 }
