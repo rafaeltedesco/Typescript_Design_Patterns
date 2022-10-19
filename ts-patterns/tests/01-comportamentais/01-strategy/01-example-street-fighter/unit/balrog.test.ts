@@ -15,23 +15,8 @@ describe('Test Balrog', ()=> {
         expect(player).toHaveProperty('attackName')
         expect(player.attackName).toEqual('Dash Straight')
     })
-    it('should attack another player with Dash Straight', ()=> {
-        const akuma = new Akuma()
-        expect(player.attack(akuma)).toEqual('Balrog attacks Akuma with Dash Straight!')
-    })
+    
     it('should be an instance of a Fighter class', ()=> {
         expect(player).toBeInstanceOf(FightPlayer)
-    })
-    it('should take damage from enemy after an attack', ()=> {
-        const akuma = new Akuma()
-        const expectedLifePoints = 80
-        player.attack(akuma)
-        expect(akuma.lifePoints).toEqual(expectedLifePoints)
-    })
-    it('should call method take damage from enemy class when attacks', ()=> {
-        const akuma = new Akuma()
-        const akumaSpy = jest.spyOn(akuma, "takeDamage")
-        player.attack(akuma)
-        expect(akumaSpy).toBeCalledTimes(1)
     })
 })

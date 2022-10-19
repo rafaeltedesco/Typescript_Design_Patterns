@@ -23,5 +23,24 @@ describe('Test a Fight', () => {
                 expect(balrogSpy).toBeCalledTimes(1)
             })
         })
+        describe('Test Balrog fighting with Akuma', ()=> {
+            const balrog = new Balrog()
+            it('should attack another player with Dash Straight', ()=> {
+                const akuma = new Akuma()
+                expect(balrog.attack(akuma)).toEqual('Balrog attacks Akuma with Dash Straight!')
+            })
+            it('should take damage from enemy after an attack', ()=> {
+                const akuma = new Akuma()
+                const expectedLifePoints = 80
+                balrog.attack(akuma)
+                expect(akuma.lifePoints).toEqual(expectedLifePoints)
+            })
+            it('should call method take damage from enemy class when attacks', ()=> {
+                const akuma = new Akuma()
+                const akumaSpy = jest.spyOn(akuma, "takeDamage")
+                balrog.attack(akuma)
+                expect(akumaSpy).toBeCalledTimes(1)
+            })
+        })
     })
 })
