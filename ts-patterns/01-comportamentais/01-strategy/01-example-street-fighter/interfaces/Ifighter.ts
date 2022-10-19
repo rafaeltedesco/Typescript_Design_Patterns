@@ -5,4 +5,5 @@ export interface IFighter extends IPlayer {
     strength: number;
     attackName: string;
     attack(enemy: IFighter): string;
+    takeDamage(): void;
 }
