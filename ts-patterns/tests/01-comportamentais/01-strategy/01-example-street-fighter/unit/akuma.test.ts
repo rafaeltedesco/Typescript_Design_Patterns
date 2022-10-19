@@ -1,5 +1,6 @@
 import { Player } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/interfaces/player"
 import { Akuma } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/akuma"
+import { Balrog } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/balrog"
 import { Fighter } from "../../../../../01-comportamentais/01-strategy/abstracts/fighter"
 
 describe('Test Akuma', ()=> {
@@ -13,8 +14,9 @@ describe('Test Akuma', ()=> {
         expect(player).toHaveProperty('attackName')
         expect(player.attackName).toEqual('Gou-Hadoken')
     })
-    it('should attack with Gou-Hadoken', ()=> {
-        expect(player.attack()).toEqual('Akuma attacks with Gou-Hadoken!')
+    it('should attack another Player with Gou-Hadoken', ()=> {
+        const enemy: Player = new Balrog()
+        expect(player.attack(enemy)).toEqual('Akuma attacks Balrog with Gou-Hadoken!')
     })
     it('should be an instance of a Fighter class', ()=> {
         expect(player).toBeInstanceOf(Fighter)
