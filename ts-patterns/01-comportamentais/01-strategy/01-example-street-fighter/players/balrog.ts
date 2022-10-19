@@ -1,6 +1,10 @@
-import { Fighter } from "../../abstracts/fighter";
 
-export class Balrog extends Fighter {
-    name = 'Balrog';
+import { FightPlayer } from "../../abstracts/fightPlayer";
+
+export class Balrog extends FightPlayer {
+    
     attackName = 'Dash Straight'
+    constructor() {
+        super('Balrog')
+    }
 }

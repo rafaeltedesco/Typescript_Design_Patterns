@@ -1,6 +1,9 @@
-import { Fighter } from "../../abstracts/fighter";
+import { FightPlayer } from "../../abstracts/fightPlayer";
 
-export class Akuma extends Fighter {
-    name = 'Akuma';
+export class Akuma extends FightPlayer {
     attackName = 'Gou-Hadoken'
+
+    constructor() {
+        super('Akuma')
+    }
 }
