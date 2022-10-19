@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npx jest",
     "test:coverage": "npx jest --coverage",
-    "test:watch": "npx jest --watchAll --coverage"
+    "test:watch": "npx jest --watchAll --coverage",
+    "lint": "eslint . --ext .ts"
   },
   "keywords": [],
   "author": "",
