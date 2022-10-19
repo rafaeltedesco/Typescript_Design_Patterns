@@ -15,4 +15,7 @@ describe('Test Akuma', ()=> {
     it('should attack with Gou-Hadoken', ()=> {
         expect(player.attack()).toEqual('Akuma attacks with Gou-Hadoken!')
     })
+    it('should be an instance of a Fighter class', ()=> {
+        expect(player).toBeInstanceOf(Fighter)
+    })
 })
