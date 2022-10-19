@@ -21,4 +21,9 @@ describe('Test Akuma', ()=> {
     it('should be an instance of a Fighter class', ()=> {
         expect(player).toBeInstanceOf(FightPlayer)
     })
+    it('should take damage from enemy after an attack', ()=> {
+        const balrog = new Balrog()
+        player.attack(balrog)
+        expect(balrog.lifePoints).toEqual(player.strength)
+    })
 })
