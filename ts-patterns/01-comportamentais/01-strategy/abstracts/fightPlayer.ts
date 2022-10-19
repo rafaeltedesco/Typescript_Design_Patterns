@@ -19,6 +19,7 @@ export class FightPlayer extends Player implements IFighter {
 
     takeDamage(attackStrength: number): void {
         this.lifePoints -= attackStrength
+        if (this.lifePoints <= 0 ) this.isAlive = false
     }
 
 }
