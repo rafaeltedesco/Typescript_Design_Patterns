@@ -1,11 +1,11 @@
-import { Player } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/interfaces/player"
+import { IFighter } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/interfaces/Ifighter"
 import { Akuma } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/akuma"
 import { Balrog } from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/balrog"
-import { Fighter } from "../../../../../01-comportamentais/01-strategy/abstracts/fighter"
+import { FightPlayer } from "../../../../../01-comportamentais/01-strategy/abstracts/fightPlayer"
 
 describe('Test Akuma', ()=> {
     
-    const player: Player = new Akuma()
+    const player: IFighter = new Akuma()
 
     it('should create a player called Akuma', ()=> {
         expect(player.name).toEqual('Akuma')
@@ -15,10 +15,10 @@ describe('Test Akuma', ()=> {
         expect(player.attackName).toEqual('Gou-Hadoken')
     })
     it('should attack another Player with Gou-Hadoken', ()=> {
-        const enemy: Player = new Balrog()
+        const enemy: IFighter = new Balrog()
         expect(player.attack(enemy)).toEqual('Akuma attacks Balrog with Gou-Hadoken!')
     })
     it('should be an instance of a Fighter class', ()=> {
-        expect(player).toBeInstanceOf(Fighter)
+        expect(player).toBeInstanceOf(FightPlayer)
     })
 })
