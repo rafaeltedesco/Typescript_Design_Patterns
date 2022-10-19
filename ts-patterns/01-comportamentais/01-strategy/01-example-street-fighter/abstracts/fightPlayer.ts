@@ -1,7 +1,8 @@
 import { IFighter } from "../interfaces/Ifighter";
 import { Player } from "./player";
 
-export class FightPlayer extends Player implements IFighter {
+export abstract class FightPlayer extends Player implements IFighter {
+    
     lifePoints: number;
     strength: number;
 
@@ -20,6 +21,13 @@ export class FightPlayer extends Player implements IFighter {
     takeDamage(attackStrength: number): void {
         this.lifePoints -= attackStrength
         if (this.lifePoints <= 0 ) this.isAlive = false
+    }
+
+    get story(): string {
+        throw new Error("Method not implemented.");
+    }
+    protected loadStory(): void {
+        throw new Error("Method not implemented.");
     }
 
 }
