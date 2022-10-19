@@ -15,4 +15,7 @@ describe('Test Balrog', ()=> {
     it('should attack with Dash Straight', ()=> {
         expect(player.attack()).toEqual('Balrog attacks with Dash Straight!')
     })
+    it('should be an instance of a Fighter class', ()=> {
+        expect(player).toBeInstanceOf(Fighter)
+    })
 })
