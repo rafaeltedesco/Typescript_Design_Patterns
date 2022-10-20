@@ -1,6 +1,7 @@
 import Game from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/game";
 import Akuma from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/akuma";
 import Balrog from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/balrog";
+import Narrator from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/narrator";
 
 describe("Test a Game", () => {
   describe("Test Game Instanciation", () => {
@@ -16,6 +17,11 @@ describe("Test a Game", () => {
       const game = new Game(players[0], players[1]);
       expect(game).toHaveProperty("hasNarrator");
       expect(game.hasNarrator).toBeFalsy();
+    });
+    it("should create a game with Players and a Narrator and hasNarrator property should change to true", () => {
+      const game = new Game(players[0], players[1], new Narrator());
+      expect(game).toHaveProperty("narrator");
+      expect(game.hasNarrator).toBeTruthy();
     });
   });
 });
