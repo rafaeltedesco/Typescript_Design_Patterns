@@ -9,5 +9,13 @@ describe("Test Account Transfer", () => {
       expect(account1.balance).toEqual(300);
       expect(account2.balance).toEqual(900);
     });
+    it("should not make a transer when don't have enough money available", () => {
+      const account1 = new Account(200);
+      const account2 = new Account(500);
+      const transferError = () => account1.transfer(account2, 500);
+      expect(transferError).toThrow(
+        new Error("You dont't have enough money to make this withdraw")
+      );
+    });
   });
 });
