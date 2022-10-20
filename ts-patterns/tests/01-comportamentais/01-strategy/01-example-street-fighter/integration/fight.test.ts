@@ -31,6 +31,12 @@ describe("Test a Fight", () => {
         akuma.attack(balrog);
         expect(balrog.isAlive).toBeFalsy();
       });
+      it("should attack Balrog with specialAttack called Wrath of the Raging Demon", () => {
+        const balrog = new Balrog();
+        expect(akuma.specialAttack(balrog)).toEqual(
+          "Akuma attacks Balrog with specialAttack Wrath of the Raging Demon!"
+        );
+      });
     });
     describe("Test Balrog fighting with Akuma", () => {
       const balrog = new Balrog();
