@@ -1,12 +1,12 @@
+import IAttack from "./Iattack";
 import IPlayer from "./Iplayer";
 
 interface IFighter extends IPlayer {
   lifePoints: number;
   strength: number;
-  attackName: string;
+  moves: IAttack;
   attack(enemy: IFighter): string;
   takeDamage(attackStrength: number): void;
-  specialAttackName: string;
 }
 
 export default IFighter;
