@@ -67,6 +67,12 @@ describe("Test a Fight", () => {
         balrog.attack(akuma);
         expect(akuma.isAlive).toBeFalsy();
       });
+      it("should attack Akuma with specialAttack called Buffalo Headbutt", () => {
+        const akuma = new Akuma();
+        expect(balrog.specialAttack(akuma)).toEqual(
+          "Balrog attacks Akuma with specialAttack Buffalo Headbutt!"
+        );
+      });
     });
   });
 });
