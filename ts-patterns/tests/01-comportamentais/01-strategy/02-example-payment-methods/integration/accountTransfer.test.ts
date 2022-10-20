@@ -7,7 +7,7 @@ describe("Test Account Transfer", () => {
       const account2 = new Account(700);
       account1.transfer(account2, 200);
       expect(account1.balance).toEqual(300);
-      expect(account2.balance).toEqual(1000);
+      expect(account2.balance).toEqual(900);
     });
   });
 });
