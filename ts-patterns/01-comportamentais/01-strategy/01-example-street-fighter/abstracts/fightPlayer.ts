@@ -4,7 +4,7 @@ import Player from "./player";
 abstract class FightPlayer extends Player implements IFighter {
   lifePoints: number;
   strength: number;
-  attackName = "";
+  abstract attackName: string;
   abstract specialAttack: string;
 
   constructor(name: string, lifePoints: number, strength: number) {
