@@ -6,6 +6,7 @@ interface IFighter extends IPlayer {
   strength: number;
   moves: IAttack;
   attack(enemy: IFighter): string;
+  specialAttack(enemy: IFighter): string;
   takeDamage(attackStrength: number): void;
 }
 
