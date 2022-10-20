@@ -11,9 +11,10 @@
 </div>
 
 ---
-##<a href="./01-example-street-fighter" style="color:white;">01 - Street Fighter Example</a>
+## <a href="./01-example-street-fighter" style="color:white;">01 - Street Fighter Example</a>
 
 ![street fighter](https://img.redbull.com/images/c_crop,x_0,y_0,h_720,w_1280/c_fill,w_910,h_512/q_auto,f_auto/redbullcom/2017/05/26/f54674bf-425f-489a-9e9a-b4c899d03ad8/ultra-street-fighter-2-character-selection-screen)
+
 fonte: [redbull](https://www.redbull.com/int-en/ultra-street-fighter-2-tips-and-tricks)
 
 <details>
@@ -51,9 +52,10 @@ Mais informações sobre o que cada _ator_ é capaz de fazer podem ser facilment
 </details>
 
 ---
-##<a href="./01-example-street-fighter" style="color:white;">02 - Payment Methods Example</a>
+## <a href="./01-example-street-fighter" style="color:white;">02 - Payment Methods Example</a>
 
 ![paymentMethods](https://img.freepik.com/free-photo/close-up-customer-paying-by-credit-card_329181-2048.jpg?w=740&t=st=1666301329~exp=1666301929~hmac=89cbb2341b51f19f9b22c5e013b0b90a3f097bbe4bb164b05e2755b7665ba995)
+
 fonte: [freepik](ttps://www.freepik.com/free-photo/close-up-customer-paying-by-credit-card_10896159.htm#query=payment&position=21&from_view=search&track=sph)
 
 <details>
