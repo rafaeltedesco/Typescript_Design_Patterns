@@ -1,6 +1,10 @@
 class Account {
   private _balance = 0;
 
+  constructor(value?: number) {
+    if (value) this._balance = value;
+  }
+
   deposit(value: number) {
     this._balance += value;
   }
