@@ -4,7 +4,7 @@ import IPlayer from "../interfaces/Iplayer";
 class Narrator extends NarratorPlayer {
   private story = "";
 
-  tellStory() {
+  tellStory(): string {
     if (this.story.length === 0) return `I don't know any story yet`;
     return this.story;
   }
