@@ -2,5 +2,5 @@ export interface IPlayer {
     name: string
     isAlive: boolean
     story: string
-    loadStory(): void
+    loadStory(): Promise<string>
 }
