@@ -8,7 +8,7 @@ export class Balrog extends FightPlayer {
         super('Balrog', 100, 40)
         this.storyPath = path.resolve(
             __dirname,
-            '../stories/akumaStory.json'
+            '../stories/balrogStory.json'
         )
     }
 
