@@ -19,7 +19,9 @@ fonte: [redbull](https://www.redbull.com/int-en/ultra-street-fighter-2-tips-and-
 
 <details>
 <summary>
-Saiba mais
+
+### Saiba mais
+
 </summary>
 
 Nesse exemplo, é possível observar o padrão _Strategy_ sendo utilizado em mais de um cenário.
@@ -56,7 +58,7 @@ Mais informações sobre o que cada _ator_ é capaz de fazer podem ser facilment
 </details>
 
 ---
-## <a href="./01-example-street-fighter" style="color:white;">02 - Payment Methods Example</a>
+## <a href="./02-example-payment-methods" style="color:white;">02 - Payment Methods Example</a>
 
 <img src="https://img.freepik.com/free-photo/close-up-customer-paying-by-credit-card_329181-2048.jpg?w=740&t=st=1666301329~exp=1666301929~hmac=89cbb2341b51f19f9b22c5e013b0b90a3f097bbe4bb164b05e2755b7665ba995" width="800"/>
 
@@ -64,7 +66,9 @@ fonte: [freepik](https://www.freepik.com/free-photo/close-up-customer-paying-by-
 
 <details>
 <summary>
-Saiba mais
+
+### Saiba mais
+
 </summary>
 
 
