@@ -16,4 +16,8 @@ describe("Test Akuma", () => {
   it("should be an instance of a Fighter class", () => {
     expect(player).toBeInstanceOf(FightPlayer);
   });
+  it("should have a special attack called Wrath of the Raging Demon", () => {
+    expect(player).toHaveProperty("specialAttack");
+    expect(player.specialAttack).toEqual("Wrath of the Raging Demon");
+  });
 });
