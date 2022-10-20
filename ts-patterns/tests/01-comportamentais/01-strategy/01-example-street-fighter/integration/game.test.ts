@@ -3,7 +3,7 @@ import Game from "../../../../../01-comportamentais/01-strategy/01-example-stree
 import Akuma from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/akuma";
 import Balrog from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/balrog";
 import Narrator from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/narrator";
-import readJSONFile from "../../../../../01-comportamentais/utils/jsonFileReader";
+import reader from "../../../../../01-comportamentais/utils/jsonFileReader";
 import FakeMockAttack from "./mocks/DumyMockAttack";
 import FakeMockPlayer from "./mocks/DumyMockFighter";
 
@@ -56,8 +56,10 @@ describe("Test a Game", () => {
         const narrator = new Narrator();
         const game = new Game(players[0], players[1], narrator);
         const [akuma, balrog] = players;
-        const akumaMockStory = (await readJSONFile(akumaStoryPath)).story;
-        const balrogMockStory = (await readJSONFile(balrogStoryPath)).story;
+        const akumaMockStory = (await reader.readJSONFile(akumaStoryPath))
+          .story;
+        const balrogMockStory = (await reader.readJSONFile(balrogStoryPath))
+          .story;
         const narratorSpy = jest.spyOn(narrator, "askForStory");
         const akumaStory = await game.tellStory(akuma);
         const balrogStory = await game.tellStory(balrog);
