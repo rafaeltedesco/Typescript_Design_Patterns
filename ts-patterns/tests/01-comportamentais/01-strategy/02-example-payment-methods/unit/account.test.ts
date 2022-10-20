@@ -13,10 +13,10 @@ describe("Test an Account", () => {
       account.deposit(150);
       expect(account.balance).toEqual(300);
     });
-    it("should start an Account with an deposit in constructor", ()=> {
-        const account = new Account(500)
-        expect(account.balance).toEqual(500)
-    })
+    it("should start an Account with an deposit in constructor", () => {
+      const account = new Account(500);
+      expect(account.balance).toEqual(500);
+    });
   });
   describe("Test WithDraw", () => {
     it("should decrease balance when make a withdraw", () => {
