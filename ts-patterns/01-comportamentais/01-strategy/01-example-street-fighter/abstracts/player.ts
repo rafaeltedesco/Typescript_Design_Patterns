@@ -27,8 +27,9 @@ export abstract class Player implements IPlayer {
         this._storyPath = storyPath
     }
 
-    async loadStory(): Promise<void> {
+    async loadStory(): Promise<string> {
         this.story = (await readJSONFile(this.storyPath)).story
+        return this.story
     }
    
 }
