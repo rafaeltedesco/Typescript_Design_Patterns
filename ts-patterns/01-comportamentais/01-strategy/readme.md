@@ -13,7 +13,8 @@
 ---
 ##<a href="./01-example-street-fighter" style="color:white;">Street Fighter Example</a>
 
-![street fighter](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa7t0sNGEflr85Ijj4TeW_pJwpc1JhMQGMGQ&usqp=CAU)
+![street fighter](https://img.redbull.com/images/c_crop,x_0,y_0,h_720,w_1280/c_fill,w_910,h_512/q_auto,f_auto/redbullcom/2017/05/26/f54674bf-425f-489a-9e9a-b4c899d03ad8/ultra-street-fighter-2-character-selection-screen)
+fonte: [redbull](https://www.redbull.com/int-en/ultra-street-fighter-2-tips-and-tricks)
 
 <details>
 <summary>
@@ -32,7 +33,7 @@ Como cada `Player` tem sua própria história para contar e o `Narrator` não de
 
 Mais detalhes no Diagrama a seguir:
 
-![diagram](./01-example-street-fighter/images/streetFighterDgr.png)
+![diagram](https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2017/05/26/8e9df911-f4d9-48c0-81cf-a7f1a3a01b9a/ultra-street-fighter-2-nintendo-switch)
 
 Como os players sabem atacar e produzir dano nos oponentes uma ideia futura é construir um sistema de batalha.
 
