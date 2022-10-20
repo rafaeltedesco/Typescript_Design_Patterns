@@ -1,6 +1,6 @@
 import { IPlayer } from "./Iplayer";
 
 export interface INarrator {
-    tellStory(player: IPlayer): void
+    tellStory(): string
     askForStory(player: IPlayer): Promise<void>
 }
