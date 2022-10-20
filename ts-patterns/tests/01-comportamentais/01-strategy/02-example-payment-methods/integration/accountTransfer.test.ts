@@ -50,5 +50,18 @@ describe("Test Account Transfer", () => {
         expect(account1.balance).toEqual(expectedBalance);
       });
     });
+    describe("Cannot transfer to another account when paymentMethod is not selected", () => {
+      it("should throw an error when requesting a transfer without selecting a paymentMethod first", () => {
+        const transferValue = 150;
+        const account1 = new Account(300);
+        const account2 = new Account(800);
+        const paymentMethodError = () =>
+          account1.transfer(account2, transferValue);
+
+        expect(paymentMethodError).toThrow(
+          new Error("Must selected a paymentMethod first!")
+        );
+      });
+    });
   });
 });
