@@ -1,6 +1,8 @@
+import IPaymentMethod from "../interfaces/IPaymentMethod";
+
 class Account {
   private _balance = 0;
-  private _tax = 0;
+  private paymentStrategy: IPaymentMethod | undefined = undefined;
 
   constructor(value?: number) {
     if (value) this._balance = value;
@@ -16,13 +18,14 @@ class Account {
     this._balance -= value;
   }
 
-  setPaymentMethod(type: string) {
-    if (type === "TED") this._tax = 0.025;
-    if (type === "DOC") this._tax = 0.075;
+  setPaymentMethod(paymentStrategy: IPaymentMethod) {
+    this.paymentStrategy = paymentStrategy;
   }
 
   transfer(account: Account, value: number) {
-    this.withdraw(value * (1 + this._tax));
+    if (!this.paymentStrategy)
+      throw new Error("Must selected a paymentMethod first!");
+    this.withdraw(this.paymentStrategy.calculateDiscount(value));
     account.deposit(value);
   }
 
