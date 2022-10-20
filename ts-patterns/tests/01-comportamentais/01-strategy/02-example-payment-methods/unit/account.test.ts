@@ -21,5 +21,13 @@ describe("Test an Account", () => {
       account.withdraw(600);
       expect(account.balance).toEqual(400);
     });
+    it("should not make a withdraw when requested value is greather than balance", () => {
+      const account = new Account();
+      account.deposit(100);
+      const withdrawError = () => account.withdraw(101);
+      expect(withdrawError).toThrow(
+        new Error("You dont't have enough money to make this withdraw")
+      );
+    });
   });
 });
