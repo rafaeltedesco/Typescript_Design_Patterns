@@ -71,7 +71,7 @@ fonte: [freepik](https://www.freepik.com/free-photo/close-up-customer-paying-by-
 
 </summary>
 
-As _Strategies_ podem facilmente ser encontradas na pasta `strategies`[strategies](./02-example-payment-methods/domain/strategies/). São os métodos de pagamento.
+As _Strategies_ podem facilmente ser encontradas na pasta [strategies](./02-example-payment-methods/domain/strategies/). São os métodos de pagamento.
 
 As _Strategies_ foram criadas para resolver o problema gerado ao aplicar um algoritmo diferente de desconto para cada forma de pagamento solicitada pelo cliente.
 
