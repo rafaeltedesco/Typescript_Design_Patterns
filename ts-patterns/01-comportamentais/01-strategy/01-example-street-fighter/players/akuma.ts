@@ -2,6 +2,7 @@ import path from "path";
 import FightPlayer from "../abstracts/fightPlayer";
 
 class Akuma extends FightPlayer {
+  specialAttack = "Wrath of the Raging Demon";
   attackName = "Gou-Hadoken";
 
   constructor() {

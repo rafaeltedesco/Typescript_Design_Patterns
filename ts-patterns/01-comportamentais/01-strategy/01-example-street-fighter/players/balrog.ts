@@ -2,6 +2,7 @@ import path from "path";
 import FightPlayer from "../abstracts/fightPlayer";
 
 class Balrog extends FightPlayer {
+  specialAttack = "Buffalo Headbutt";
   attackName = "Dash Straight";
 
   constructor() {
