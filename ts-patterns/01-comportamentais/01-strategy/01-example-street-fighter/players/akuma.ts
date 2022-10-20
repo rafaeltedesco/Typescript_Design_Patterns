@@ -1,15 +1,13 @@
-import { FightPlayer } from "../abstracts/fightPlayer";
-import path from 'path';
+import path from "path";
+import FightPlayer from "../abstracts/fightPlayer";
 
-export class Akuma extends FightPlayer {
-    attackName = 'Gou-Hadoken'
-    
-    constructor() {
-        super('Akuma', 120, 60)
-        this.storyPath = path.resolve(
-            __dirname,
-            '../stories/akumaStory.json'
-        )
-    }
-   
+class Akuma extends FightPlayer {
+  attackName = "Gou-Hadoken";
+
+  constructor() {
+    super("Akuma", 120, 60);
+    this.storyPath = path.resolve(__dirname, "../stories/akumaStory.json");
+  }
 }
+
+export default Akuma;

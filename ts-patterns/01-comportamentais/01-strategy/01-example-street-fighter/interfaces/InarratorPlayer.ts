@@ -1,6 +1,8 @@
-import { IPlayer } from "./Iplayer";
+import IPlayer from "./Iplayer";
 
-export interface INarrator {
-    tellStory(): string
-    askForStory(player: IPlayer): Promise<void>
+interface INarrator {
+  tellStory(): string;
+  askForStory(player: IPlayer): Promise<void>;
 }
+
+export default INarrator;

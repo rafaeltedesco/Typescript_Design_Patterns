@@ -1,25 +1,26 @@
-import { IFighter } from "../interfaces/Ifighter";
-import { Player } from "./player";
+import IFighter from "../interfaces/Ifighter";
+import Player from "./player";
 
-export abstract class FightPlayer extends Player implements IFighter {
-    
-    lifePoints: number;
-    strength: number;
-    attackName = '';
-    
-    constructor(name: string, lifePoints: number, strength: number) {
-        super(name)
-        this.lifePoints = lifePoints
-        this.strength = strength
-    }
+abstract class FightPlayer extends Player implements IFighter {
+  lifePoints: number;
+  strength: number;
+  attackName = "";
 
-    attack(enemy: IFighter): string {
-        enemy.takeDamage(this.strength)
-        return `${this.name} attacks ${enemy.name} with ${this.attackName}!`
-    }
+  constructor(name: string, lifePoints: number, strength: number) {
+    super(name);
+    this.lifePoints = lifePoints;
+    this.strength = strength;
+  }
 
-    takeDamage(attackStrength: number): void {
-        this.lifePoints -= attackStrength
-        if (this.lifePoints <= 0 ) this.isAlive = false
-    }
+  attack(enemy: IFighter): string {
+    enemy.takeDamage(this.strength);
+    return `${this.name} attacks ${enemy.name} with ${this.attackName}!`;
+  }
+
+  takeDamage(attackStrength: number): void {
+    this.lifePoints -= attackStrength;
+    if (this.lifePoints <= 0) this.isAlive = false;
+  }
 }
+
+export default FightPlayer;
