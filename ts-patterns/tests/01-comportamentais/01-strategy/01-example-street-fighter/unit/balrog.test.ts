@@ -9,15 +9,15 @@ describe("Test Balrog", () => {
     expect(player.name).toEqual("Balrog");
   });
   it("should have a property called attackName with Dash Straight as a value", () => {
-    expect(player).toHaveProperty("attackName");
-    expect(player.attackName).toEqual("Dash Straight");
+    expect(player).toHaveProperty("moves.attackName");
+    expect(player.moves.attackName).toEqual("Dash Straight");
   });
 
   it("should be an instance of a Fighter class", () => {
     expect(player).toBeInstanceOf(FightPlayer);
   });
   it("should have a special attack called Buffalo Headbutt", () => {
-    expect(player).toHaveProperty("specialAttackName");
-    expect(player.specialAttackName).toEqual("Buffalo Headbutt");
+    expect(player).toHaveProperty("moves.specialAttackName");
+    expect(player.moves.specialAttackName).toEqual("Buffalo Headbutt");
   });
 });
