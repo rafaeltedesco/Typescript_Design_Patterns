@@ -1,15 +1,18 @@
 
-import { Player } from "../abstracts/player";
-import { INarrator } from "../interfaces/InarratorPlayer";
+import { NarratorPlayer } from "../abstracts/narratorPlayer";
 import { IPlayer } from "../interfaces/Iplayer";
 
-export class Narrator extends Player implements INarrator {
+export class Narrator extends NarratorPlayer {
 
-    constructor() {
-        super('Narrator')
+    private story = ''
+
+    tellStory() {
+        if (this.story.length == 0) 
+            return `I don't know any story yet`
+        return this.story
     }
 
-    tellStory(player: IPlayer) {
-        return player.story
+    async askForStory(player: IPlayer): Promise<void> {
+        this.story = await player.loadStory()
     }
 }
