@@ -6,7 +6,7 @@
  Qual o propósito desse repositório </summary>
  <p>
 
-Esse repositório tem o propósito de fornecer diversos exemplos simples e práticos, para a comunidade _Dev_ e demais interessados, de cada um dos 23 padrões de projetos (Design Patterns) catalogados pela GoF (Gang of Four) no livro _Design Patterns Elements of Reusable Object-Oriented Software_. 
+Esse repositório tem o propósito de fornecer diversos exemplos práticos, para a comunidade _Dev_ e demais interessados, de cada um dos 23 padrões de projetos (Design Patterns) catalogados pela GoF (Gang of Four) no livro _Design Patterns Elements of Reusable Object-Oriented Software_. 
 
 </p>
 </details>
@@ -22,7 +22,7 @@ Os exemplos aqui reunidos podem ser adaptações de materiais encontrados em cur
 <details><summary>O que é esse repositório</summary>
 <p>
 
-Um guia simples e rápido de consulta de diversos exemplos para uso no dia-a-dia.
+Um guia de consulta com diversos exemplos aplicados para possibilitar o entendimento em variados contextos;
 
 </p>
 </details>
@@ -31,7 +31,6 @@ Um guia simples e rápido de consulta de diversos exemplos para uso no dia-a-dia
 <p>
 
 Uma referência completa e absoluta sobre Design Patterns.
-
 
 </p>
 </details>
