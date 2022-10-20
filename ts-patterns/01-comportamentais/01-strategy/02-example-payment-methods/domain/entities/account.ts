@@ -15,6 +15,11 @@ class Account {
     this._balance -= value;
   }
 
+  transfer(account: Account, value: number) {
+    this.withdraw(value);
+    account.deposit(value);
+  }
+
   get balance(): number {
     return this._balance;
   }
