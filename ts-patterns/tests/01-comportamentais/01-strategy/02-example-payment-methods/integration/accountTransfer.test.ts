@@ -21,8 +21,9 @@ describe("Test Account Transfer", () => {
       it("should make a transfer usign TED and apply a tax of 0.025%", () => {
         const TEDTAX = 0.025;
         const transferValue = 500;
-        const expectedBalance = 500 * (1 - TEDTAX);
-        const account1 = new Account(700);
+        const initialBalanceAccount1 = 700;
+        const expectedBalance = initialBalanceAccount1 - 500 * (1 + TEDTAX);
+        const account1 = new Account(initialBalanceAccount1);
         const account2 = new Account(1000);
         account1.setPaymentMethod("TED");
         account1.transfer(account2, transferValue);
