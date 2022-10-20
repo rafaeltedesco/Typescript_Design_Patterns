@@ -14,9 +14,9 @@ describe("Test a Fight", () => {
       });
       it("should take damage from enemy after an attack", () => {
         const balrog = new Balrog();
-        const expectedLifePoints = 40;
+        const expectedBalrogLifePoints = 40;
         akuma.attack(balrog);
-        expect(balrog.lifePoints).toEqual(expectedLifePoints);
+        expect(balrog.lifePoints).toEqual(expectedBalrogLifePoints);
       });
       it("should call method take damage from enemy class when attacks", () => {
         const balrog = new Balrog();
@@ -37,6 +37,12 @@ describe("Test a Fight", () => {
           "Akuma attacks Balrog with specialAttack Wrath of the Raging Demon!"
         );
       });
+      it("should take twice damage from Balrog when Akuma use an specialAttack comparing to a regular Attack", () => {
+        const balrog = new Balrog();
+        const expectedBalrogLifePoints = -20;
+        akuma.specialAttack(balrog);
+        expect(balrog.lifePoints).toEqual(expectedBalrogLifePoints);
+      });
     });
     describe("Test Balrog fighting with Akuma", () => {
       const balrog = new Balrog();
@@ -48,9 +54,9 @@ describe("Test a Fight", () => {
       });
       it("should take damage from enemy after an attack", () => {
         const akuma = new Akuma();
-        const expectedLifePoints = 80;
+        const expectedAkumaLifePoints = 80;
         balrog.attack(akuma);
-        expect(akuma.lifePoints).toEqual(expectedLifePoints);
+        expect(akuma.lifePoints).toEqual(expectedAkumaLifePoints);
       });
       it("should call method take damage from enemy class when attacks", () => {
         const akuma = new Akuma();
@@ -72,6 +78,12 @@ describe("Test a Fight", () => {
         expect(balrog.specialAttack(akuma)).toEqual(
           "Balrog attacks Akuma with specialAttack Buffalo Headbutt!"
         );
+      });
+      it("should take twice damage from Akuma when Balrog use an specialAttack comparing to a regular Attack", () => {
+        const akuma = new Akuma();
+        const expectedAkumaLifePoints = 40;
+        balrog.specialAttack(akuma);
+        expect(akuma.lifePoints).toEqual(expectedAkumaLifePoints);
       });
     });
   });
