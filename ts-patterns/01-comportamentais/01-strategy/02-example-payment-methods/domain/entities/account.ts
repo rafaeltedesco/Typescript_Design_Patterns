@@ -6,6 +6,8 @@ class Account {
   }
 
   withdraw(value: number) {
+    if (value > this._balance)
+      throw new Error("You dont't have enough money to make this withdraw");
     this._balance -= value;
   }
 
