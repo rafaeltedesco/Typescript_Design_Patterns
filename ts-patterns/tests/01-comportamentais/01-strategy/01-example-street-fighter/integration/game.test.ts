@@ -51,13 +51,17 @@ describe("Test a Game", () => {
       );
 
       it("should choose to show a player Story when tellStory is called with a Player that is in the game and has a narrator", async () => {
-        const game = new Game(players[0], players[1], new Narrator());
+        const narrator = new Narrator();
+        const game = new Game(players[0], players[1], narrator);
         const [akuma, balrog] = players;
-        const akumaStory = (await readJSONFile(akumaStoryPath)).story;
-        const balrogStory = (await readJSONFile(balrogStoryPath)).story;
-
-        expect(game.tellStory(akuma)).toEqual(akumaStory);
-        expect(game.tellStory(balrog)).toEqual(balrogStory);
+        const akumaMockStory = (await readJSONFile(akumaStoryPath)).story;
+        const balrogMockStory = (await readJSONFile(balrogStoryPath)).story;
+        const narratorSpy = jest.spyOn(narrator, "askForStory");
+        const akumaStory = await game.tellStory(akuma);
+        const balrogStory = await game.tellStory(balrog);
+        expect(narratorSpy).toBeCalledTimes(2);
+        expect(akumaStory).toEqual(akumaMockStory);
+        expect(balrogStory).toEqual(balrogMockStory);
       });
     });
   });
