@@ -20,7 +20,8 @@ describe('Test Narrator', ()=> {
         it('should tell Akuma Story', async ()=> {
             const akuma = new Akuma()
             const akumaStory = (await readJSONFile(akumaStoryPath)).story
-            expect(narrator.tellStory(akuma)).toEqual(akumaStory)
+            await narrator.askForStory(akuma)
+            expect(narrator.tellStory()).toEqual(akumaStory)
         })
     })
 })
