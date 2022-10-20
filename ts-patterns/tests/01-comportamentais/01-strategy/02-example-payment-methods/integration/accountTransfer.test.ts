@@ -19,13 +19,22 @@ describe("Test Account Transfer", () => {
     });
     describe("Transfer to another account using TED", () => {
       it("should make a transfer usign TED and apply a tax of 0.025%", () => {
-        const TEDTAX = 0.025;
         const transferValue = 500;
-        const initialBalanceAccount1 = 700;
-        const expectedBalance = initialBalanceAccount1 - 500 * (1 + TEDTAX);
-        const account1 = new Account(initialBalanceAccount1);
+        const expectedBalance = 187.5;
+        const account1 = new Account(700);
         const account2 = new Account(1000);
         account1.setPaymentMethod("TED");
+        account1.transfer(account2, transferValue);
+        expect(account1.balance).toEqual(expectedBalance);
+      });
+    });
+    describe("Transfer to another account using DOC", () => {
+      it("should make a transfer usign DOC and apply a tax of 0.075%", () => {
+        const transferValue = 300;
+        const expectedBalance = 177.5;
+        const account1 = new Account(500);
+        const account2 = new Account(1000);
+        account1.setPaymentMethod("DOC");
         account1.transfer(account2, transferValue);
         expect(account1.balance).toEqual(expectedBalance);
       });
