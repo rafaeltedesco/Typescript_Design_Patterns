@@ -13,6 +13,13 @@ class Game {
     if (narrator) this.narrator = narrator;
   }
 
+  async tellStory(player: IFighter): Promise<string> {
+    if (![this._player1, this._player2].includes(player))
+      throw new Error("Player is not available in the game!");
+    await this.narrator.askForStory(player);
+    return this.narrator.tellStory();
+  }
+
   get player1(): IFighter {
     return this._player1;
   }
