@@ -1,5 +1,6 @@
 class Account {
   private _balance = 0;
+  private _tax = 0;
 
   constructor(value?: number) {
     if (value) this._balance = value;
@@ -15,8 +16,12 @@ class Account {
     this._balance -= value;
   }
 
+  setPaymentMethod(type: string) {
+    if (type === "TED") this._tax = 0.025;
+  }
+
   transfer(account: Account, value: number) {
-    this.withdraw(value);
+    this.withdraw(value * (1 + this._tax));
     account.deposit(value);
   }
 
