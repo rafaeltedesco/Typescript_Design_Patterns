@@ -4,6 +4,8 @@ import Akuma from "../../../../../01-comportamentais/01-strategy/01-example-stre
 import Balrog from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/balrog";
 import Narrator from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/narrator";
 import readJSONFile from "../../../../../01-comportamentais/utils/jsonFileReader";
+import FakeMockAttack from "./mocks/DumyMockAttack";
+import FakeMockPlayer from "./mocks/DumyMockFighter";
 
 describe("Test a Game", () => {
   describe("Test Game Instanciation", () => {
@@ -62,6 +64,19 @@ describe("Test a Game", () => {
         expect(narratorSpy).toBeCalledTimes(2);
         expect(akumaStory).toEqual(akumaMockStory);
         expect(balrogStory).toEqual(balrogMockStory);
+      });
+      it("should throw an error when asked for tell a story of a player that is not in the game", async () => {
+        const fakeMockPlayer = new FakeMockPlayer(
+          "Joh Doe",
+          999,
+          99,
+          new FakeMockAttack()
+        );
+        const game = new Game(players[0], players[1], new Narrator());
+        const narratorError = async () => game.tellStory(fakeMockPlayer);
+        await expect(narratorError()).rejects.toThrow(
+          "Player is not available in the game!"
+        );
       });
     });
   });
