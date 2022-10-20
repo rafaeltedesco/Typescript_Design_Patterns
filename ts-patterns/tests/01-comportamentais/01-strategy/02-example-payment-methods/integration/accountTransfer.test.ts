@@ -1,17 +1,15 @@
 import Account from "../../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/entities/account";
+import DOC from "../../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/strategies/doc";
+import PaymentSlip from "../../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/strategies/paymentSlip";
+import TED from "../../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/strategies/ted";
 
 describe("Test Account Transfer", () => {
   describe("Transfer to another Account", () => {
-    it("should make a transfer to another account", () => {
-      const account1 = new Account(500);
-      const account2 = new Account(700);
-      account1.transfer(account2, 200);
-      expect(account1.balance).toEqual(300);
-      expect(account2.balance).toEqual(900);
-    });
-    it("should not make a transer when don't have enough money available", () => {
+    it("should not make a transfer when don't have enough money available", () => {
       const account1 = new Account(200);
       const account2 = new Account(500);
+      const paymentSlipStrategy = new PaymentSlip();
+      account1.setPaymentMethod(paymentSlipStrategy);
       const transferError = () => account1.transfer(account2, 500);
       expect(transferError).toThrow(
         new Error("You dont't have enough money to make this operation")
@@ -23,7 +21,8 @@ describe("Test Account Transfer", () => {
         const expectedBalance = 187.5;
         const account1 = new Account(700);
         const account2 = new Account(1000);
-        account1.setPaymentMethod("TED");
+        const tedStrategy = new TED();
+        account1.setPaymentMethod(tedStrategy);
         account1.transfer(account2, transferValue);
         expect(account1.balance).toEqual(expectedBalance);
       });
@@ -34,7 +33,8 @@ describe("Test Account Transfer", () => {
         const expectedBalance = 177.5;
         const account1 = new Account(500);
         const account2 = new Account(1000);
-        account1.setPaymentMethod("DOC");
+        const docStrategy = new DOC();
+        account1.setPaymentMethod(docStrategy);
         account1.transfer(account2, transferValue);
         expect(account1.balance).toEqual(expectedBalance);
       });
@@ -45,7 +45,8 @@ describe("Test Account Transfer", () => {
         const expectedBalance = 147;
         const account1 = new Account(300);
         const account2 = new Account(800);
-        account1.setPaymentMethod("PaymentSlip");
+        const paymentSlipStrategy = new PaymentSlip();
+        account1.setPaymentMethod(paymentSlipStrategy);
         account1.transfer(account2, transferValue);
         expect(account1.balance).toEqual(expectedBalance);
       });
