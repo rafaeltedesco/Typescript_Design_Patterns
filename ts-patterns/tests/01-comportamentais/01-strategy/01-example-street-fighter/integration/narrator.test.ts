@@ -1,7 +1,7 @@
 import path from "path";
 import Akuma from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/akuma";
 import Narrator from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/narrator";
-import reader from "../../../../../01-comportamentais/utils/jsonFileReader";
+import reader from "../../../../../utils/jsonFileReader";
 import Balrog from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/balrog";
 
 describe("Test Narrator", () => {

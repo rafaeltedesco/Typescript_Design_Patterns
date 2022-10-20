@@ -1,5 +1,5 @@
 import path from "path";
-import reader from "../../../../../01-comportamentais/utils/jsonFileReader";
+import reader from "../../../../../utils/jsonFileReader";
 
 describe("Test JSON reader", () => {
   it("should read a JSON file", async () => {

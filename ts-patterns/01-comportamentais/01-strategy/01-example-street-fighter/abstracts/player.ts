@@ -1,4 +1,4 @@
-import reader from "../../../utils/jsonFileReader";
+import reader from "../../../../utils/jsonFileReader";
 import IPlayer from "../interfaces/Iplayer";
 
 abstract class Player implements IPlayer {
