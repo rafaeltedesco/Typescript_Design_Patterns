@@ -14,4 +14,12 @@ describe("Test an Account", () => {
       expect(account.balance).toEqual(300);
     });
   });
+  describe("Test WithDraw", () => {
+    it("should decrease balance when make a withdraw", () => {
+      const account = new Account();
+      account.deposit(1000);
+      account.withdraw(600);
+      expect(account.balance).toEqual(400);
+    });
+  });
 });
