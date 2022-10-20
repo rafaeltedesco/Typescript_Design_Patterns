@@ -2,7 +2,7 @@ import IPaymentMethod from "../interfaces/IPaymentMethod";
 
 class Account {
   private _balance = 0;
-  private paymentStrategy: IPaymentMethod | undefined = undefined;
+  private paymentStrategy: IPaymentMethod | undefined;
 
   constructor(value?: number) {
     if (value) this._balance = value;
