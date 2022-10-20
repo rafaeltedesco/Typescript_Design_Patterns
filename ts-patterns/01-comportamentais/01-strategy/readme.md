@@ -71,5 +71,12 @@ fonte: [freepik](https://www.freepik.com/free-photo/close-up-customer-paying-by-
 
 </summary>
 
+As _Strategies_ podem facilmente ser encontradas na pasta `strategies`. São os métodos de pagamento.
+
+As _Strategies_ foram criadas para resolver o problema gerado ao aplicar um algoritmo diferente de desconto para cada forma de pagamento solicitada pelo cliente.
+
+Além de evitar o uso de `ifs` para seleção dos métodos, que cresceria consideravelmente com o acréscimo de novas formas, também possibilitou adicionar um método que utiliza taxa fixa, ao invés de um valor percentual, isolando o cálculo da taxa e delegando a responsabilidade para cada uma das classes que implementa a interface `IPaymentMethod`.
+
+Desse modo, a classe `Account` desconhece os detalhes de implementação do cálculo da taxa aplicada para cada nova forma de pagamento, desacoplando o sistema.
 
 </details>
