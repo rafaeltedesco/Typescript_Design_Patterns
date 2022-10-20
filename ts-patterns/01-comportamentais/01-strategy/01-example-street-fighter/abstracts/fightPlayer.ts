@@ -24,6 +24,11 @@ abstract class FightPlayer extends Player implements IFighter {
     return `${this.name} attacks ${enemy.name} with ${this.moves.attackName}!`;
   }
 
+  specialAttack(enemy: IFighter): string {
+    enemy.takeDamage(this.strength * 2);
+    return `${this.name} attacks ${enemy.name} with specialAttack ${this.moves.specialAttackName}!`;
+  }
+
   takeDamage(attackStrength: number): void {
     this.lifePoints -= attackStrength;
     if (this.lifePoints <= 0) this.isAlive = false;
