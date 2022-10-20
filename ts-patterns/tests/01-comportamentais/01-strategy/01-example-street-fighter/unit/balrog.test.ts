@@ -17,7 +17,7 @@ describe("Test Balrog", () => {
     expect(player).toBeInstanceOf(FightPlayer);
   });
   it("should have a special attack called Buffalo Headbutt", () => {
-    expect(player).toHaveProperty("specialAttack");
-    expect(player.specialAttack).toEqual("Buffalo Headbutt");
+    expect(player).toHaveProperty("specialAttackName");
+    expect(player.specialAttackName).toEqual("Buffalo Headbutt");
   });
 });
