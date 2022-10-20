@@ -3,7 +3,7 @@ import { IPlayer } from "../interfaces/Iplayer"
 
 export abstract class NarratorPlayer implements INarrator {
       
-    abstract tellStory(player: IPlayer): void;
+    abstract tellStory(): string;
     abstract askForStory(player: IPlayer): Promise<void>;
 
    
