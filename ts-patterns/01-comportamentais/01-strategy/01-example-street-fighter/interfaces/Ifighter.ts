@@ -6,7 +6,7 @@ interface IFighter extends IPlayer {
   attackName: string;
   attack(enemy: IFighter): string;
   takeDamage(attackStrength: number): void;
-  specialAttack: string;
+  specialAttackName: string;
 }
 
 export default IFighter;

@@ -5,7 +5,7 @@ abstract class FightPlayer extends Player implements IFighter {
   lifePoints: number;
   strength: number;
   abstract attackName: string;
-  abstract specialAttack: string;
+  abstract specialAttackName: string;
 
   constructor(name: string, lifePoints: number, strength: number) {
     super(name);
