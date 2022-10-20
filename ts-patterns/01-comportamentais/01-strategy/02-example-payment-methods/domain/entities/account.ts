@@ -18,6 +18,7 @@ class Account {
 
   setPaymentMethod(type: string) {
     if (type === "TED") this._tax = 0.025;
+    if (type === "DOC") this._tax = 0.075;
   }
 
   transfer(account: Account, value: number) {
