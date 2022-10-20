@@ -14,7 +14,7 @@ describe("Test Account Transfer", () => {
       const account2 = new Account(500);
       const transferError = () => account1.transfer(account2, 500);
       expect(transferError).toThrow(
-        new Error("You dont't have enough money to make this withdraw")
+        new Error("You dont't have enough money to make this operation")
       );
     });
   });

@@ -30,7 +30,7 @@ describe("Test an Account", () => {
       account.deposit(100);
       const withdrawError = () => account.withdraw(101);
       expect(withdrawError).toThrow(
-        new Error("You dont't have enough money to make this withdraw")
+        new Error("You dont't have enough money to make this operation")
       );
     });
   });
