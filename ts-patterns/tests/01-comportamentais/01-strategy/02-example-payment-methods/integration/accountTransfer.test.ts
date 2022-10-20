@@ -39,5 +39,16 @@ describe("Test Account Transfer", () => {
         expect(account1.balance).toEqual(expectedBalance);
       });
     });
+    describe("Transfer to another account using Payment Slip (Boleto Bancário)", () => {
+      it("should make a transfer usign PaymentSlip and apply a fixed discount of 3", () => {
+        const transferValue = 150;
+        const expectedBalance = 147;
+        const account1 = new Account(300);
+        const account2 = new Account(800);
+        account1.setPaymentMethod("PaymentSlip");
+        account1.transfer(account2, transferValue);
+        expect(account1.balance).toEqual(expectedBalance);
+      });
+    });
   });
 });
