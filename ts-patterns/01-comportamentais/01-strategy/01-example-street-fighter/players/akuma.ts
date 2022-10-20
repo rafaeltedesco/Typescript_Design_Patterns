@@ -1,12 +1,10 @@
 import path from "path";
 import FightPlayer from "../abstracts/fightPlayer";
+import AkumaAttacks from "./attacks/akumaAttacks";
 
 class Akuma extends FightPlayer {
-  specialAttackName = "Wrath of the Raging Demon";
-  attackName = "Gou-Hadoken";
-
   constructor() {
-    super("Akuma", 120, 60);
+    super("Akuma", 120, 60, new AkumaAttacks());
     this.storyPath = path.resolve(__dirname, "../stories/akumaStory.json");
   }
 }
