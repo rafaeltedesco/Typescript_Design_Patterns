@@ -22,9 +22,14 @@ class Account {
     this.paymentStrategy = paymentStrategy;
   }
 
+  equals(account: Account) {
+    return JSON.stringify(account) === JSON.stringify(this);
+  }
+
   transfer(account: Account, value: number) {
     if (!this.paymentStrategy)
       throw new Error("Must selected a paymentMethod first!");
+    if (account.equals(this)) throw new Error("Cannot transfer to yourself");
     this.withdraw(this.paymentStrategy.calculateDiscount(value));
     account.deposit(value);
   }
