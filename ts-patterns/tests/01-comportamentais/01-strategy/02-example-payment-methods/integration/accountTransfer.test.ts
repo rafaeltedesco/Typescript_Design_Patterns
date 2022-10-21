@@ -64,5 +64,15 @@ describe("Test Account Transfer", () => {
         );
       });
     });
+    describe("Account cannot transfer to itself", () => {
+      it("should throw an error when trying to transfer to itself", () => {
+        const transferValue = 150;
+        const account1 = new Account(300);
+        account1.setPaymentMethod(new PaymentSlip());
+        const transferError = () => account1.transfer(account1, transferValue);
+
+        expect(transferError).toThrow(new Error("Cannot transfer to yourself"));
+      });
+    });
   });
 });
