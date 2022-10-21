@@ -38,7 +38,7 @@ Uma referência completa e absoluta sobre Design Patterns.
 ---
 
 ### Contribua também
-Caso queira contribuir com mais exemplos, inclusive em outras linguagens, ou caso tenha encontrado algum erro ou ponto de melhoria basta clonar o repositório e abrir um _pull request_ com a proposta de inclusão/modificação.
+Caso queira contribuir com mais exemplos, inclusive em outras linguagens, ou caso tenha encontrado algum erro ou ponto de melhoria basta clonar o repositório e abrir um _pull request_ ou uma _issue_ com a proposta de inclusão/modificação.
 
 ---
 ### Se divirta
