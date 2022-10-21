@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:street-fighter": "ts-node ./01-comportamentais/01-strategy/01-example-street-fighter/client.ts",
+    "test:street-fighter": "npx jest tests/01-comportamentais/01-strategy/01-example-street-fighter",
+    "start:payment-methods": "ts-node ./01-comportamentais/01-strategy/02-example-payment-methods/client.ts",
+    "test:payment-methods": "npx jest tests/01-comportamentais/01-strategy/02-example-payment-methods",
     "test": "npx jest",
     "test:coverage": "npx jest --coverage",
     "test:watch": "npx jest --watchAll --coverage",
