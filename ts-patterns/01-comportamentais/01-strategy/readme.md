@@ -38,7 +38,7 @@ Mais detalhes no Diagrama a seguir:
 
 <center>
 
-<img src="./01-example-street-fighter//images/streetFighterDgr.png">
+<img src="./01-example-street-fighter/images/streetFighterDgr.png">
 
 </center>
 
@@ -78,5 +78,9 @@ As _Strategies_ foram criadas para resolver o problema gerado ao aplicar um algo
 Além de evitar o uso de `ifs` para seleção dos métodos, que cresceria consideravelmente com o acréscimo de novas formas, também possibilitou adicionar um método que utiliza taxa fixa, ao invés de um valor percentual, isolando o cálculo da taxa e delegando a responsabilidade para cada uma das classes que implementa a interface `IPaymentMethod`.
 
 Desse modo, a classe `Account` desconhece os detalhes de implementação do cálculo da taxa aplicada para cada nova forma de pagamento, desacoplando o sistema.
+
+Detalhes no Diagrama a seguir:
+
+<img src="./02-example-payment-methods/images/diagrams/paymentMethods.png" />
 
 </details>
