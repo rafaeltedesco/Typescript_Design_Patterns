@@ -26,7 +26,9 @@ fonte: [redbull](https://www.redbull.com/int-en/ultra-street-fighter-2-tips-and-
 
 Nesse exemplo, é possível observar o padrão _Strategy_ sendo utilizado em mais de um cenário.
 
-O Padrão Strategy é utilizado para tornar intercambiável o uso das classes concretas `Akuma` e `Balrog` (nossos players) na chamada do método `askForStoryPlayer` da classe `Narrator`. No exemplo, ambos carregam a história a partir da leitura de um arquivo JSON, mas poderiam utilizar diferentes implementações, sendo possível que a forma de carregar de cada `FighPlayer` seja independente. `Balrog, por exemplo, poderia carregar a história de um banco de dados, enquanto que `Akuma` de uma Web API e etc.
+O Padrão Strategy é utilizado para tornar intercambiável o uso das classes concretas `Akuma` e `Balrog` (nossos players) na chamada do método `askForStoryPlayer` da classe `Narrator`. No exemplo, ambos carregam a história a partir da leitura de um arquivo JSON, mas poderiam utilizar diferentes implementações, sendo possível que a forma de carregar de cada `FighPlayer` seja independente. 
+  
+`Balrog`, por exemplo, poderia carregar a história de um banco de dados, enquanto que `Akuma` de uma Web API e etc.
 
 Cada classe que implementa `IPlayer` sabe como carregar e compartilhar sua própria história.
 
