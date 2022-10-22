@@ -23,5 +23,14 @@ describe("Test Buyer when interacting with other classes", () => {
       );
       expect(storeBranch).toBeInstanceOf(ClothingStore);
     });
+    it("askForAStoreToBuyProduct should call searchProductInBranches in MegaStore", async () => {
+      const buyer = new Buyer("John Doe");
+      const searchSpy = jest.spyOn(
+        MegaStore.prototype,
+        "searchProductInBranches"
+      );
+      await buyer.askForAStoreToBuyProduct(new TShirt(), new MegaStore());
+      expect(searchSpy).toBeCalledTimes(1);
+    });
   });
 });
