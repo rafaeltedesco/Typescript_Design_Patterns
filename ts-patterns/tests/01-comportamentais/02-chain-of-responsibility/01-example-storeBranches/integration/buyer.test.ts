@@ -13,5 +13,13 @@ describe("Test Buyer when interacting with other classes", () => {
       );
       expect(storeBranch).toBeInstanceOf(GroceryStore);
     });
+    it("should ask a T-Shirt to megaStore and receive a ClothingStore", () => {
+      const buyer = new Buyer("John Doe");
+      const storeBranch = buyer.askForAStoreToBuyProduct(
+        new TShirt(),
+        new MegaStore()
+      );
+      expect(storeBranch).toBeInstanceOf(ClothingStore);
+    });
   });
 });
