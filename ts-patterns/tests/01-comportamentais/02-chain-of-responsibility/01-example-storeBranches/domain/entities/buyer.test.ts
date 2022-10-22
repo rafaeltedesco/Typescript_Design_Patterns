@@ -12,5 +12,10 @@ describe("Test Buyer", () => {
       expect(buyer).toHaveProperty("email");
       expect(buyer.email).toEqual("any@mail.com");
     });
+    it("should create a Buyer and setMoney", () => {
+      const buyer = new Buyer("John Doe");
+      buyer.setMoney(500);
+      expect(buyer.money).toEqual(500);
+    });
   });
 });
