@@ -1,5 +1,6 @@
 import { IProduct } from "../interfaces/Iproduct";
 import StoreBranchHandler from "../interfaces/storeBranchHandler";
+import ClothingStore from "./clothingStore";
 import GroceryStore from "./groceryStore";
 
 class MegaStore {
@@ -11,7 +12,9 @@ class MegaStore {
 
   // eslint-disable-next-line class-methods-use-this
   searchProductInBrances(product: IProduct): StoreBranchHandler {
-    return new GroceryStore();
+    return product.name === "Potato Chips"
+      ? new GroceryStore()
+      : new ClothingStore();
   }
 }
 
