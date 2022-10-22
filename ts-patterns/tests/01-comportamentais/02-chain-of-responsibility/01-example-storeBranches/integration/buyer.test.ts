@@ -1,12 +1,15 @@
 import Buyer from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyer";
+import GroceryStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/groceryStore";
+import MegaStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/megaStore";
+import PotatoChips from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/products/potatoChips";
 
 describe("Test Buyer when interacting with other classes", () => {
   describe("Test Buyer when askingForProduct to MegaStore", () => {
     it("should ask PotatoChips to megaStore and receive a GroceryStore", () => {
       const buyer = new Buyer("John Doe");
-      const storeBranch = buyer.askForProduct(
+      const storeBranch = buyer.askForAStoreToBuyProduct(
         new PotatoChips(),
-        new megaStore()
+        new MegaStore()
       );
       expect(storeBranch).toBeInstanceOf(GroceryStore);
     });
