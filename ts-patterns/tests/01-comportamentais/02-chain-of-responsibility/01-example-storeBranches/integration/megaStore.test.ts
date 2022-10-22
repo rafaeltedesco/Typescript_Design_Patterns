@@ -23,5 +23,14 @@ describe("Test Mega Store", () => {
     const store = megaStore.searchProductInBrances(new TShirt());
     expect(store).toBeInstanceOf(ClothingStore);
   });
-
+  it("should call hasProduct in groceryStore once", () => {
+    const megaStore = new MegaStore();
+    const groceryStore = new GroceryStore();
+    const clothingStore = new ClothingStore();
+    clothingStore.setNext(groceryStore);
+    megaStore.storeChain = clothingStore;
+    const grocerySpy = jest.spyOn(groceryStore, "hasProduct");
+    megaStore.searchProductInBrances(new PotatoChips());
+    expect(grocerySpy).toBeCalledTimes(1);
+  });
 });
