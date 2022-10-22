@@ -28,10 +28,10 @@ class Buyer {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  askForAStoreToBuyProduct(
+  async askForAStoreToBuyProduct(
     product: IProduct,
     megaStore: MegaStore
-  ): StoreBranchHandler {
+  ): Promise<StoreBranchHandler> {
     return product.name === "Potato Chips"
       ? new GroceryStore()
       : new ClothingStore();
