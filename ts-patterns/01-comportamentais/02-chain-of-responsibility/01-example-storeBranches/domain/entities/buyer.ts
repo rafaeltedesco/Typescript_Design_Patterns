@@ -1,5 +1,6 @@
 import { IProduct } from "../interfaces/Iproduct";
 import StoreBranchHandler from "../interfaces/storeBranchHandler";
+import ClothingStore from "./clothingStore";
 import GroceryStore from "./groceryStore";
 import MegaStore from "./megaStore";
 
@@ -31,7 +32,9 @@ class Buyer {
     product: IProduct,
     megaStore: MegaStore
   ): StoreBranchHandler {
-    return new GroceryStore();
+    return product.name === "Potato Chips"
+      ? new GroceryStore()
+      : new ClothingStore();
   }
 
   setMoney(money: number) {
