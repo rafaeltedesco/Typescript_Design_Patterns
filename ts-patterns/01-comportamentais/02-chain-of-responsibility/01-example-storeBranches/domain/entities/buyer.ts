@@ -1,3 +1,8 @@
+import { IProduct } from "../interfaces/Iproduct";
+import StoreBranchHandler from "../interfaces/storeBranchHandler";
+import GroceryStore from "./groceryStore";
+import MegaStore from "./megaStore";
+
 class Buyer {
   private _name: string;
   private _email: string | undefined;
@@ -19,6 +24,14 @@ class Buyer {
 
   get money(): number {
     return this._money;
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  askForAStoreToBuyProduct(
+    product: IProduct,
+    megaStore: MegaStore
+  ): StoreBranchHandler {
+    return new GroceryStore();
   }
 
   setMoney(money: number) {
