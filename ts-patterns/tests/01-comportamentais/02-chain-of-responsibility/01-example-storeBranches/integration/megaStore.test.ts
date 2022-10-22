@@ -1,0 +1,16 @@
+import ClothingStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/clothingStore";
+import GroceryStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/groceryStore";
+import MegaStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/megaStore";
+import PotatoChips from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/products/potatoChips";
+
+describe("Test Mega Store", () => {
+  it("Mega Store should search PotatoChips in Branches and return GroceryStore", () => {
+    const megaStore = new MegaStore();
+    const groceryStore = new GroceryStore();
+    const clothingStore = new ClothingStore();
+    clothingStore.setNext(groceryStore);
+    megaStore.storeChain = clothingStore;
+    const store = megaStore.searchProductInBrances(new PotatoChips());
+    expect(store).toBeInstanceOf(groceryStore);
+  });
+});
