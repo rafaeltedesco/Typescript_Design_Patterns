@@ -7,17 +7,17 @@ import TShirt from "../../../../../01-comportamentais/02-chain-of-responsibility
 
 describe("Test Buyer when interacting with other classes", () => {
   describe("Test Buyer when askingForProduct to MegaStore", () => {
-    it("should ask PotatoChips to megaStore and receive a GroceryStore", () => {
+    it("should ask PotatoChips to megaStore and receive a GroceryStore", async () => {
       const buyer = new Buyer("John Doe");
-      const storeBranch = buyer.askForAStoreToBuyProduct(
+      const storeBranch = await buyer.askForAStoreToBuyProduct(
         new PotatoChips(),
         new MegaStore()
       );
       expect(storeBranch).toBeInstanceOf(GroceryStore);
     });
-    it("should ask a T-Shirt to megaStore and receive a ClothingStore", () => {
+    it("should ask a T-Shirt to megaStore and receive a ClothingStore", async () => {
       const buyer = new Buyer("John Doe");
-      const storeBranch = buyer.askForAStoreToBuyProduct(
+      const storeBranch = await buyer.askForAStoreToBuyProduct(
         new TShirt(),
         new MegaStore()
       );
