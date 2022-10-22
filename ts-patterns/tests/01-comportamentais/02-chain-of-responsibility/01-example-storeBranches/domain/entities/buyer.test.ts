@@ -17,5 +17,12 @@ describe("Test Buyer", () => {
       buyer.setMoney(500);
       expect(buyer.money).toEqual(500);
     });
+    it("should thrown an Error when trying to set a negative value to money", () => {
+      const buyer = new Buyer("John Doe");
+      const errorSetMoney = () => buyer.setMoney(-100);
+      expect(errorSetMoney).toThrow(
+        new Error("Cannot set a negative value to money!")
+      );
+    });
   });
 });
