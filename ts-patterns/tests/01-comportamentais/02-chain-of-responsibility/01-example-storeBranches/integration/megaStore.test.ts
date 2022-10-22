@@ -11,7 +11,7 @@ describe("Test Mega Store", () => {
     const clothingStore = new ClothingStore();
     clothingStore.setNext(groceryStore);
     megaStore.storeChain = clothingStore;
-    const store = megaStore.searchProductInBrances(new PotatoChips());
+    const store = megaStore.searchProductInBranches(new PotatoChips());
     expect(store).toBeInstanceOf(GroceryStore);
   });
   it("Mega Store should search for T-Shirt in Branches and return Clothing Store", () => {
@@ -20,7 +20,7 @@ describe("Test Mega Store", () => {
     const clothingStore = new ClothingStore();
     clothingStore.setNext(groceryStore);
     megaStore.storeChain = clothingStore;
-    const store = megaStore.searchProductInBrances(new TShirt());
+    const store = megaStore.searchProductInBranches(new TShirt());
     expect(store).toBeInstanceOf(ClothingStore);
   });
   it("should call hasProduct in groceryStore once", () => {
@@ -30,7 +30,7 @@ describe("Test Mega Store", () => {
     clothingStore.setNext(groceryStore);
     megaStore.storeChain = clothingStore;
     const grocerySpy = jest.spyOn(groceryStore, "hasProduct");
-    megaStore.searchProductInBrances(new PotatoChips());
+    megaStore.searchProductInBranches(new PotatoChips());
     expect(grocerySpy).toBeCalledTimes(1);
   });
 });
