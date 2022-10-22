@@ -22,6 +22,7 @@ class Buyer {
   }
 
   setMoney(money: number) {
+    if (money < 0) throw new Error("Cannot set a negative value to money!");
     this._money = money;
   }
 }
