@@ -3,7 +3,7 @@ import BaseStore from "../abstracts/baseStore";
 import { IProduct, Buyable } from "../interfaces/Iproduct";
 
 class GroceryStore extends BaseStore {
-  name = "SuperCandy Store";
+  name = "MegaCandy Store";
 
   constructor(name?: string) {
     super();
