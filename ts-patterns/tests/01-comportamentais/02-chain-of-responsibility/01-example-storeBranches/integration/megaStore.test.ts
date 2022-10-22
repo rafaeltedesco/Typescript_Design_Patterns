@@ -5,7 +5,7 @@ import PotatoChips from "../../../../../01-comportamentais/02-chain-of-responsib
 import TShirt from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/products/tShirt";
 
 describe("Test Mega Store", () => {
-  it("Mega Store should search PotatoChips in Branches and return GroceryStore", () => {
+  it("Mega Store should search for PotatoChips in Branches and return GroceryStore", () => {
     const megaStore = new MegaStore();
     const groceryStore = new GroceryStore();
     const clothingStore = new ClothingStore();
