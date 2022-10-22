@@ -11,6 +11,6 @@ describe("Test Mega Store", () => {
     clothingStore.setNext(groceryStore);
     megaStore.storeChain = clothingStore;
     const store = megaStore.searchProductInBrances(new PotatoChips());
-    expect(store).toBeInstanceOf(groceryStore);
+    expect(store).toBeInstanceOf(GroceryStore);
   });
 });
