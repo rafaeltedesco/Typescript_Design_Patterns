@@ -7,5 +7,10 @@ describe("Test Buyer", () => {
       expect(buyer).toHaveProperty("name");
       expect(buyer.name).toEqual("John Doe");
     });
+    it("should create a Buyer with name and email", () => {
+      const buyer = new Buyer("John Doe", "any@mail.com");
+      expect(buyer).toHaveProperty("email");
+      expect(buyer.email).toEqual("any@mail.com");
+    });
   });
 });
