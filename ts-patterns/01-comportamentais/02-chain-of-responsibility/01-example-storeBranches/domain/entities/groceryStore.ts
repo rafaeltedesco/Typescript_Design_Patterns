@@ -4,6 +4,12 @@ import { IProduct, Buyable } from "../interfaces/Iproduct";
 
 class GroceryStore extends BaseStore {
   name = "SuperCandy Store";
+
+  constructor(name?: string) {
+    super();
+    if (name) this.name = name;
+  }
+
   async hasProduct(product: IProduct): Promise<boolean> {
     return true;
   }
