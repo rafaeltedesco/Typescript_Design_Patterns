@@ -102,5 +102,21 @@ describe("Test Buyer when interacting with other classes", () => {
         new Error("Sorry, you don't have enough money!")
       );
     });
+    it("should call buyer.canBuy when trying to buy a product", () => {
+      const tShirt = new TShirt();
+      const storeBranch = Buyer.askForAStoreToBuyProduct(
+        tShirt,
+        megaStore
+      ) as ClothingStore;
+      const buyableProduct = Buyer.askStoreForProductWithPrice(
+        tShirt,
+        storeBranch
+      ) as BuaybleTShirt;
+      const buyer = new Buyer("John Doe");
+      buyer.setMoney(50.0);
+      const canBuySpy = jest.spyOn(buyer, "canBuy");
+      buyer.buyProduct(buyableProduct, storeBranch);
+      expect(canBuySpy).toBeCalledTimes(1);
+    });
   });
 });
