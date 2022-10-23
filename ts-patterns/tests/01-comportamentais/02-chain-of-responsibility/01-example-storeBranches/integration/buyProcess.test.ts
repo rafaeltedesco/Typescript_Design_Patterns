@@ -57,21 +57,13 @@ describe("Test a Sell Process started by a Buyer", () => {
     expect(canBuySpy).toBeCalledTimes(1);
   });
   it("should call storeBranch.sellProduct when trying to buy a product and expect to decrease stock quantity and increase store balance", () => {
-    const mockTShirt: BuaybleTShirt = {
-      name: "Mock T-Shirt",
-      price: 42.7,
-      quantity: 100,
-    };
-    sinon.stub(Buyer, "askStoreForProductWithPrice").returns(mockTShirt);
-    buyableProduct = Buyer.askStoreForProductWithPrice(
-      new TShirt(),
-      storeBranch
-    ) as Buyable;
+    storeBranch.products[0].quantity = 100;
+    storeBranch.balance = 0;
     const buyer = new Buyer("John Doe");
     buyer.setMoney(50.0);
     buyer.buyProduct(buyableProduct, storeBranch);
-    expect(buyableProduct.quantity).toEqual(99);
-    expect(buyableProduct.name).toEqual("Mock T-Shirt");
+    const product = storeBranch.products.at(0) as BuaybleTShirt;
+    expect(product.quantity).toEqual(99);
     expect(storeBranch.balance).toBeCloseTo(42.7);
     sinon.restore();
   });
