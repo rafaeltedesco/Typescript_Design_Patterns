@@ -50,7 +50,7 @@ describe("Test Buyer when interacting with other classes", () => {
         potatoChips,
         megaStore
       ) as GroceryStore;
-      const buyableProduct: Buyable = Buyer.askStoreForPrice(
+      const buyableProduct: Buyable = Buyer.askStoreForProductWithPrice(
         potatoChips,
         storeBranch
       );
