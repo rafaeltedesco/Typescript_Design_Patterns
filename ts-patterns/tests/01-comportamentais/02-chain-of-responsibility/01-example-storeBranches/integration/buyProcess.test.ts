@@ -55,4 +55,11 @@ describe("Test a Sell Process started by a Buyer", () => {
     buyer.buyProduct(buyableProduct, storeBranch);
     expect(canBuySpy).toBeCalledTimes(1);
   });
+  it("should call storeBranch.sellProduct when trying to buy a product", () => {
+    const buyer = new Buyer("John Doe");
+    buyer.setMoney(50.0);
+    const sellProductSpy = jest.spyOn(storeBranch, "sellProduct");
+    buyer.buyProduct(buyableProduct, storeBranch);
+    expect(sellProductSpy).toBeCalledTimes(1);
+  });
 });
