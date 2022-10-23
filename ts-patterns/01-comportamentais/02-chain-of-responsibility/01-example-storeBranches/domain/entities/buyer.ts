@@ -44,8 +44,12 @@ class Buyer {
     return [...this._boughtProducts];
   }
 
+  canBuy(product: Buyable): boolean {
+    return this._money - product.price > 0;
+  }
+
   buyProduct(product: Buyable, store: StoreBranchHandler) {
-    if (this._money - product.price < 0)
+    if (!this.canBuy(product))
       throw new Error("Sorry, you don't have enough money!");
     this._money -= product.price;
     this._boughtProducts.push(product);
