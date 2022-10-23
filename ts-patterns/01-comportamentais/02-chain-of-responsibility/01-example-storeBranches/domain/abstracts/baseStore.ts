@@ -2,6 +2,7 @@ import { Buyable, IProduct } from "../interfaces/Iproduct";
 import StoreBranchHandler from "../interfaces/storeBranchHandler";
 
 abstract class BaseStore implements StoreBranchHandler {
+  balance = 0;
   abstract name: string;
   phoneNumber?: string | undefined;
   products: Buyable[] = [];
