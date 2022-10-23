@@ -20,36 +20,9 @@ fonte: [redbull](https://www.redbull.com/int-en/ultra-street-fighter-2-tips-and-
 <details>
 <summary>
 
-### Saiba mais
+[Saiba mais](./01-example-street-fighter/)
 
 </summary>
-
-Nesse exemplo, é possível observar o padrão _Strategy_ sendo utilizado em mais de um cenário.
-
-O Padrão Strategy é utilizado para tornar intercambiável o uso das classes concretas `Akuma` e `Balrog` (nossos players) na chamada do método `askForStoryPlayer` da classe `Narrator`. No exemplo, ambos carregam a história a partir da leitura de um arquivo JSON, mas poderiam utilizar diferentes implementações, sendo possível que a forma de carregar de cada `FighPlayer` seja independente. 
-  
-`Balrog`, por exemplo, poderia carregar a história de um banco de dados, enquanto que `Akuma` de uma Web API e etc.
-
-Cada classe que implementa `IPlayer` sabe como carregar e compartilhar sua própria história.
-
-Em uma partida, havendo um `Narrator`, é possível solicitar que ele conte a história de um dos `FightPlayers` que estão no jogo.
-
-Como cada `Player` tem sua própria história para contar e o `Narrator` não deve ser responsável por conhecer cada uma das histórias, apenas a que ele foi solicitado para contar, e nem carregá-las, utilizando o padrão _Strategy_ é possível que seja solicitado ao `Narrator` para contar a história de qualquer `Player`do jogo que respeite a interface `IPlayer`.
-
-Mais detalhes no Diagrama a seguir:
-
-<center>
-
-<img src="./01-example-street-fighter/images/streetFighterDgr.png">
-
-</center>
-
-Como os players sabem atacar e produzir dano nos oponentes uma ideia futura é construir um sistema de batalha.
-
-Também há possibilidade de construir uma Web API para desenvolvimento de um Game integrado a uma aplicação front end.
-
-Mais informações sobre o que cada _ator_ é capaz de fazer podem ser facilmente encontradas no descritivo de cada teste de unidade e integração.
-
 
 </details>
 
@@ -63,20 +36,8 @@ fonte: [freepik](https://www.freepik.com/free-photo/close-up-customer-paying-by-
 <details>
 <summary>
 
-### Saiba mais
+[Saiba mais](./02-example-payment-methods/)
 
 </summary>
-
-As _Strategies_ podem facilmente ser encontradas na pasta [strategies](./02-example-payment-methods/domain/strategies/). São os métodos de pagamento.
-
-As _Strategies_ foram criadas para resolver o problema gerado ao aplicar um algoritmo diferente de desconto para cada forma de pagamento solicitada pelo cliente.
-
-Além de evitar o uso de `ifs` para seleção dos métodos, que cresceria consideravelmente com o acréscimo de novas formas, também possibilitou adicionar um método que utiliza taxa fixa, ao invés de um valor percentual, isolando o cálculo da taxa e delegando a responsabilidade para cada uma das classes que implementa a interface `IPaymentMethod`.
-
-Desse modo, a classe `Account` desconhece os detalhes de implementação do cálculo da taxa aplicada para cada nova forma de pagamento, desacoplando o sistema.
-
-Detalhes no Diagrama a seguir:
-
-<img src="./02-example-payment-methods/images/diagrams/paymentMethods.png" />
 
 </details>
