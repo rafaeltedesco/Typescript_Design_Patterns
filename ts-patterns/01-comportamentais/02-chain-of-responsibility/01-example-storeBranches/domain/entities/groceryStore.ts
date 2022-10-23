@@ -21,8 +21,6 @@ class GroceryStore extends BaseStore {
     if (!this.next) return null;
     return this.next.hasProduct(product);
   }
-
-  async sellProduct(product: Buyable): Promise<void> {}
 }
 
 export default GroceryStore;
