@@ -4,32 +4,42 @@ import GroceryStore from "../../../../../01-comportamentais/02-chain-of-responsi
 import MegaStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/megaStore";
 import PotatoChips from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/products/potatoChips";
 import TShirt from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/products/tShirt";
+import StoreBranchHandler from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/interfaces/storeBranchHandler";
 
 describe("Test Buyer when interacting with other classes", () => {
+  let megaStore: MegaStore;
+  let groceryStore: StoreBranchHandler;
+  let clothingStore: StoreBranchHandler;
+
+  beforeAll(() => {
+    megaStore = new MegaStore();
+    groceryStore = new GroceryStore();
+    clothingStore = new ClothingStore();
+    clothingStore.setNext(groceryStore);
+    megaStore.storeChain = clothingStore;
+  });
+
   describe("Test Buyer when askingForProduct to MegaStore", () => {
-    it("should ask PotatoChips to megaStore and receive a GroceryStore", async () => {
-      const buyer = new Buyer("John Doe");
-      const storeBranch = await buyer.askForAStoreToBuyProduct(
+    it("should ask PotatoChips to megaStore and receive a GroceryStore", () => {
+      const storeBranch = Buyer.askForAStoreToBuyProduct(
         new PotatoChips(),
-        new MegaStore()
+        megaStore
       );
       expect(storeBranch).toBeInstanceOf(GroceryStore);
     });
-    it("should ask a T-Shirt to megaStore and receive a ClothingStore", async () => {
-      const buyer = new Buyer("John Doe");
-      const storeBranch = await buyer.askForAStoreToBuyProduct(
+    it("should ask a T-Shirt to megaStore and receive a ClothingStore", () => {
+      const storeBranch = Buyer.askForAStoreToBuyProduct(
         new TShirt(),
-        new MegaStore()
+        megaStore
       );
       expect(storeBranch).toBeInstanceOf(ClothingStore);
     });
-    it("askForAStoreToBuyProduct should call searchProductInBranches in MegaStore", async () => {
-      const buyer = new Buyer("John Doe");
+    it("askForAStoreToBuyProduct should call searchProductInBranches in MegaStore", () => {
       const searchSpy = jest.spyOn(
         MegaStore.prototype,
         "searchProductInBranches"
       );
-      await buyer.askForAStoreToBuyProduct(new TShirt(), new MegaStore());
+      Buyer.askForAStoreToBuyProduct(new TShirt(), new MegaStore());
       expect(searchSpy).toBeCalledTimes(1);
     });
   });
