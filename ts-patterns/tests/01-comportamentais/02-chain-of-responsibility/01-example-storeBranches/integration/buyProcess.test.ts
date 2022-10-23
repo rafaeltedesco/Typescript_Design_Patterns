@@ -1,4 +1,4 @@
-import BuaybleTShirt from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyableProducts/BuyabletShirt";
+import BuyableTShirt from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyableProducts/BuyabletShirt";
 import Buyer from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyer";
 import ClothingStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/clothingStore";
 import GroceryStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/groceryStore";
@@ -32,7 +32,7 @@ describe("Test a Sell Process started by a Buyer", () => {
     buyableProduct = Buyer.askStoreForProductWithPrice(
       tShirt,
       storeBranch
-    ) as BuaybleTShirt;
+    ) as BuyableTShirt;
   });
 
   it("should be capable of buy a BuyableProduct when have enough money", () => {
@@ -61,7 +61,7 @@ describe("Test a Sell Process started by a Buyer", () => {
     const buyer = new Buyer("John Doe");
     buyer.setMoney(50.0);
     buyer.buyProduct(buyableProduct, storeBranch);
-    const product = storeBranch.products.at(0) as BuaybleTShirt;
+    const product = storeBranch.products.at(0) as BuyableTShirt;
     expect(product.quantity).toEqual(99);
     expect(storeBranch.balance).toBeCloseTo(42.7);
   });

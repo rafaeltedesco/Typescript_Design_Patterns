@@ -1,12 +1,12 @@
 /* eslint-disable class-methods-use-this */
 import BaseStore from "../abstracts/baseStore";
-import { IProduct, Buyable } from "../interfaces/Iproduct";
+import { IProduct } from "../interfaces/Iproduct";
 import StoreBranchHandler from "../interfaces/storeBranchHandler";
-import BuaybleTShirt from "./buyableProducts/BuyabletShirt";
+import BuyableTShirt from "./buyableProducts/BuyabletShirt";
 
 class ClothingStore extends BaseStore {
   name = "MegaClothing Store";
-  products = [new BuaybleTShirt()];
+  products = [new BuyableTShirt()];
   constructor(name?: string) {
     super();
     if (name) this.name = name;

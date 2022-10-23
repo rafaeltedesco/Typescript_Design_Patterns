@@ -1,9 +1,9 @@
 import { Buyable } from "../../interfaces/Iproduct";
 
-class BuaybleTShirt implements Buyable {
+class BuyableTShirt implements Buyable {
   price = 42.7;
   quantity = 10;
   name = "T-Shirt";
 }
 
-export default BuaybleTShirt;
+export default BuyableTShirt;
