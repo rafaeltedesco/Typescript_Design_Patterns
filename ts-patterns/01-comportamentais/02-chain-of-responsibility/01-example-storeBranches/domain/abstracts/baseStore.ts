@@ -9,7 +9,19 @@ abstract class BaseStore implements StoreBranchHandler {
   next: StoreBranchHandler | null = null;
 
   abstract hasProduct(product: IProduct): StoreBranchHandler | null;
-  abstract sellProduct(product: Buyable): void;
+
+  sellProduct(product: Buyable): void {
+    this.decreaseProductQuantity(product);
+    this._balance += product.price;
+  }
+
+  private decreaseProductQuantity(product: Buyable) {
+    const productIdx = this.products.findIndex(
+      storeProduct => storeProduct.name === product.name
+    );
+    this.products[productIdx].quantity -= 1;
+  }
+
   setNext(store: StoreBranchHandler): void {
     this.next = store;
   }
