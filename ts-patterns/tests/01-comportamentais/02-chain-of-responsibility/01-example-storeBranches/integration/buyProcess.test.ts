@@ -4,12 +4,19 @@ import ClothingStore from "../../../../../01-comportamentais/02-chain-of-respons
 import GroceryStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/groceryStore";
 import MegaStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/megaStore";
 import TShirt from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/products/tShirt";
+import {
+  Buyable,
+  IProduct,
+} from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/interfaces/Iproduct";
 import StoreBranchHandler from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/interfaces/storeBranchHandler";
 
 describe("Test a Sell Process started by a Buyer", () => {
   let megaStore: MegaStore;
   let groceryStore: StoreBranchHandler;
   let clothingStore: StoreBranchHandler;
+  let tShirt: IProduct;
+  let storeBranch: StoreBranchHandler;
+  let buyableProduct: Buyable;
 
   beforeAll(() => {
     megaStore = new MegaStore();
@@ -17,18 +24,18 @@ describe("Test a Sell Process started by a Buyer", () => {
     clothingStore = new ClothingStore();
     clothingStore.setNext(groceryStore);
     megaStore.storeChain = clothingStore;
-  });
-
-  it("should be capable of buy a BuyableProduct when have enough money", () => {
-    const tShirt = new TShirt();
-    const storeBranch = Buyer.askForAStoreToBuyProduct(
+    tShirt = new TShirt();
+    storeBranch = Buyer.askForAStoreToBuyProduct(
       tShirt,
       megaStore
     ) as ClothingStore;
-    const buyableProduct = Buyer.askStoreForProductWithPrice(
+    buyableProduct = Buyer.askStoreForProductWithPrice(
       tShirt,
       storeBranch
     ) as BuaybleTShirt;
+  });
+
+  it("should be capable of buy a BuyableProduct when have enough money", () => {
     const buyer = new Buyer("John Doe");
     buyer.setMoney(50.0);
     buyer.buyProduct(buyableProduct, storeBranch);
