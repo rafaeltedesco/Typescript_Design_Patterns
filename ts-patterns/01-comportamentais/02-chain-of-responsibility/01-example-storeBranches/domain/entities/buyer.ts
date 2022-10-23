@@ -39,7 +39,7 @@ class Buyer {
     this._money = money;
   }
 
-  static askStoreForPrice(product: IProduct, store: StoreBranchHandler): Buyable {
+  static askStoreForProductWithPrice(product: IProduct, store: StoreBranchHandler): Buyable {
     return new BuyablePotatoChips();
   }
 }
