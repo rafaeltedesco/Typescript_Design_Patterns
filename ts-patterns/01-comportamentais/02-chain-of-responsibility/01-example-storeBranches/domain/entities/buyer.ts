@@ -1,5 +1,6 @@
-import { IProduct } from "../interfaces/Iproduct";
+import { Buyable, IProduct } from "../interfaces/Iproduct";
 import StoreBranchHandler from "../interfaces/storeBranchHandler";
+import BuyablePotatoChips from "./buyableProducts/BuyablepotatoChips";
 import MegaStore from "./megaStore";
 
 class Buyer {
@@ -36,6 +37,10 @@ class Buyer {
   setMoney(money: number) {
     if (money < 0) throw new Error("Cannot set a negative value to money!");
     this._money = money;
+  }
+
+  static askStoreForPrice(product: IProduct, store: StoreBranchHandler): Buyable {
+    return new BuyablePotatoChips();
   }
 }
 
