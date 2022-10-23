@@ -53,7 +53,7 @@ describe("Test Buyer when interacting with other classes", () => {
       const buyableProduct: Buyable = Buyer.askStoreForProductWithPrice(
         potatoChips,
         storeBranch
-      );
+      ) as Buyable;
       expect(buyableProduct).toBeInstanceOf(BuyablePotatoChips);
     });
     it("should call Store.findProduct when askForStoreProductWithPrice", () => {
