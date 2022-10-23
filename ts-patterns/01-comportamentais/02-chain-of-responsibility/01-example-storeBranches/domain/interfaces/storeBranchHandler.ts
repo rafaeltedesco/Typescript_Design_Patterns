@@ -1,3 +1,4 @@
+import DesiredProduct from "./desiredProduct";
 import { Buyable, IProduct } from "./Iproduct";
 
 interface StoreBranchHandler {
@@ -10,7 +11,7 @@ interface StoreBranchHandler {
   setBalance(value: number): void;
   findProduct(product: IProduct): Buyable | null;
   hasProduct(product: IProduct): StoreBranchHandler | null;
-  sellProduct(product: Buyable): void;
+  sellProduct(product: DesiredProduct): void;
   setNext(store: StoreBranchHandler): void;
 }
 

@@ -1,3 +1,4 @@
+import DesiredProduct from "../interfaces/desiredProduct";
 import { Buyable, IProduct } from "../interfaces/Iproduct";
 import StoreBranchHandler from "../interfaces/storeBranchHandler";
 
@@ -10,8 +11,9 @@ abstract class BaseStore implements StoreBranchHandler {
 
   abstract hasProduct(product: IProduct): StoreBranchHandler | null;
 
-  sellProduct(product: Buyable): void {
-    this.decreaseProductQuantity(product);
+  sellProduct(product: DesiredProduct): void {
+    const buyableProduct = this.findProduct(product) as Buyable;
+    this.decreaseProductQuantity(buyableProduct);
     this._balance += product.price;
   }
 

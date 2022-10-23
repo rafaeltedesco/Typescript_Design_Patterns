@@ -1,12 +1,13 @@
-import { Buyable, IProduct } from "../interfaces/Iproduct";
+import { IProduct } from "../interfaces/Iproduct";
 import StoreBranchHandler from "../interfaces/storeBranchHandler";
 import MegaStore from "./megaStore";
+import DesiredProduct from "../interfaces/desiredProduct";
 
 class Buyer {
   private _name: string;
   private _email: string | undefined;
   private _money = 0;
-  private _boughtProducts: Buyable[] = [];
+  private _boughtProducts: DesiredProduct[] = [];
 
   constructor(name: string, email?: string) {
     this._name = name;
@@ -39,15 +40,15 @@ class Buyer {
     this._money = money;
   }
 
-  get boughtProducts(): Buyable[] {
+  get boughtProducts(): DesiredProduct[] {
     return [...this._boughtProducts];
   }
 
-  canBuy(product: Buyable): boolean {
+  canBuy(product: DesiredProduct): boolean {
     return this._money - product.price > 0;
   }
 
-  buyProduct(product: Buyable, store: StoreBranchHandler) {
+  buyProduct(product: DesiredProduct, store: StoreBranchHandler) {
     if (!this.canBuy(product))
       throw new Error("Sorry, you don't have enough money!");
     store.sellProduct(product);
@@ -58,7 +59,7 @@ class Buyer {
   static askStoreForProductWithPrice(
     product: IProduct,
     store: StoreBranchHandler
-  ): Buyable | null {
+  ): DesiredProduct | null {
     return store.findProduct(product);
   }
 }
