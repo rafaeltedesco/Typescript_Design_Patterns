@@ -34,6 +34,6 @@ Desse modo, a classe `Account` desconhece os detalhes de implementação do cál
 
 Detalhes no Diagrama a seguir:
 
-<img src="./02-example-payment-methods/images/diagrams/paymentMethods.png" />
+<img src="./images/diagrams/paymentMethods.png" />
 
 </details>

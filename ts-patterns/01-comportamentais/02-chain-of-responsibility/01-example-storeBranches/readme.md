@@ -55,7 +55,6 @@ O padrão *CoR* pode ser encontrado na implementação do método _hasProduct_ d
 
 A seguir o diagrama de classes representando melhor o funcionamento da aplicação.
 
-![diamagra](./01-example-storeBranches/images/ChainOfResponsability.png)
-
+![diagram](./images/ChainOfResponsability.png)
 
 </details>

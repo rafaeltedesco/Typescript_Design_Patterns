@@ -40,7 +40,7 @@ Mais detalhes no Diagrama a seguir:
 
 <center>
 
-<img src="./01-example-street-fighter/images/streetFighterDgr.png">
+<img src="./images/streetFighterDgr.png">
 
 </center>
 
