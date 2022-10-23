@@ -57,7 +57,7 @@ describe("Test a Sell Process started by a Buyer", () => {
   });
   it("should call storeBranch.sellProduct when trying to buy a product and expect to decrease stock quantity and increase store balance", () => {
     storeBranch.products[0].quantity = 100;
-    storeBranch.balance = 0;
+    storeBranch.setBalance(0);
     const buyer = new Buyer("John Doe");
     buyer.setMoney(50.0);
     buyer.buyProduct(buyableProduct, storeBranch);
