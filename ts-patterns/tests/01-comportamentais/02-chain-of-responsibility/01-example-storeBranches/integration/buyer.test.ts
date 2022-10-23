@@ -56,5 +56,15 @@ describe("Test Buyer when interacting with other classes", () => {
       );
       expect(buyableProduct).toBeInstanceOf(BuyablePotatoChips);
     });
+    it("should call Store.findProduct when askForStoreProductWithPrice", () => {
+      const potatoChips = new PotatoChips();
+      const storeBranch = Buyer.askForAStoreToBuyProduct(
+        potatoChips,
+        megaStore
+      ) as GroceryStore;
+      const storeSpy = jest.spyOn(storeBranch, "findProduct");
+      Buyer.askStoreForProductWithPrice(potatoChips, storeBranch);
+      expect(storeSpy).toBeCalledTimes(1);
+    });
   });
 });
