@@ -8,9 +8,7 @@ class MegaStore {
     this._storeChain = chain;
   }
 
-  async searchProductInBranches(
-    product: IProduct
-  ): Promise<StoreBranchHandler | null> {
+  searchProductInBranches(product: IProduct): StoreBranchHandler | null {
     const store = this._storeChain?.hasProduct(product);
     return store || null;
   }
