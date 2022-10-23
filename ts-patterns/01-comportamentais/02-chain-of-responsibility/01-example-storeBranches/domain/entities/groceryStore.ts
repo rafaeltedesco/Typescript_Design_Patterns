@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
 import BaseStore from "../abstracts/baseStore";
-import { IProduct, Buyable } from "../interfaces/Iproduct";
+import { IProduct } from "../interfaces/Iproduct";
 import StoreBranchHandler from "../interfaces/storeBranchHandler";
 import BuyablePotatoChips from "./buyableProducts/BuyablepotatoChips";
 

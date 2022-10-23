@@ -1,6 +1,5 @@
 import { Buyable, IProduct } from "../interfaces/Iproduct";
 import StoreBranchHandler from "../interfaces/storeBranchHandler";
-import BuyablePotatoChips from "./buyableProducts/BuyablepotatoChips";
 import MegaStore from "./megaStore";
 
 class Buyer {
