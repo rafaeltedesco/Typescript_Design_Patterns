@@ -51,6 +51,7 @@ class Buyer {
   buyProduct(product: Buyable, store: StoreBranchHandler) {
     if (!this.canBuy(product))
       throw new Error("Sorry, you don't have enough money!");
+    store.sellProduct(product);
     this._money -= product.price;
     this._boughtProducts.push(product);
   }
