@@ -1,7 +1,5 @@
 import { IProduct } from "../interfaces/Iproduct";
 import StoreBranchHandler from "../interfaces/storeBranchHandler";
-import ClothingStore from "./clothingStore";
-import GroceryStore from "./groceryStore";
 import MegaStore from "./megaStore";
 
 class Buyer {
@@ -27,14 +25,12 @@ class Buyer {
     return this._money;
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  async askForAStoreToBuyProduct(
+  static askForAStoreToBuyProduct(
     product: IProduct,
     megaStore: MegaStore
-  ): Promise<StoreBranchHandler> {
-    return product.name === "Potato Chips"
-      ? new GroceryStore()
-      : new ClothingStore();
+  ): StoreBranchHandler | null {
+    const store = megaStore.searchProductInBranches(product);
+    return store || null;
   }
 
   setMoney(money: number) {
