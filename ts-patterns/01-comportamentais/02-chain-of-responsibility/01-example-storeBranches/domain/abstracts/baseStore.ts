@@ -12,6 +12,13 @@ abstract class BaseStore implements StoreBranchHandler {
   setNext(store: StoreBranchHandler): void {
     this.next = store;
   }
+
+  findProduct(product: IProduct): Buyable | null {
+    return (
+      this.products.find(storeProduct => storeProduct.name === product.name) ||
+      null
+    );
+  }
 }
 
 export default BaseStore;
