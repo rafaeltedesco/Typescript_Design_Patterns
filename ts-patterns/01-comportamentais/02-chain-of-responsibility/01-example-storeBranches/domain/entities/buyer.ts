@@ -7,6 +7,7 @@ class Buyer {
   private _name: string;
   private _email: string | undefined;
   private _money = 0;
+  private _boughtProducts: Buyable[] = [];
 
   constructor(name: string, email?: string) {
     this._name = name;
@@ -37,6 +38,15 @@ class Buyer {
   setMoney(money: number) {
     if (money < 0) throw new Error("Cannot set a negative value to money!");
     this._money = money;
+  }
+
+  get boughtProducts(): Buyable[] {
+    return [...this._boughtProducts];
+  }
+
+  buyProduct(product: Buyable, store: StoreBranchHandler) {
+    this._money -= product.price;
+    this._boughtProducts.push(product);
   }
 
   static askStoreForProductWithPrice(
