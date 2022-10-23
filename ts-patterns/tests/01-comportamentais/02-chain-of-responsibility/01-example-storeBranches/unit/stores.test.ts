@@ -43,7 +43,7 @@ describe("Test Stores", () => {
   });
   it("should set balance on stores", () => {
     const store = new GroceryStore();
-    store.balance = 10;
+    store.increaseBalance(10);
     expect(store.balance).toEqual(10);
   });
 });
