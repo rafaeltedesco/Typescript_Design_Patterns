@@ -47,7 +47,31 @@ No mais, boas vindas! Espero que acima de tudo se diverta durante o processo de 
 
 </p>
 
+--- 
 
-### Coverage Atual
+### Projetos com Exemplos de Patterns disponíveis no momento
+
+#### Comportamentais
+
+<details>
+
+<summary> Strategy</summary>
+
+- 01: [streetFighterExample](./ts-patterns/01-comportamentais/01-strategy/01-example-street-fighter/)
+
+- 02: [paymentMethodsExample](./ts-patterns/01-comportamentais/01-strategy/02-example-payment-methods/)
+
+</details>
+
+<details>
+<summary> Chain Of Responsibility</summary>
+
+- 01: [storeBranchesExample](./ts-patterns/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/)
+
+</details>
+
+--- 
+
+### Code Coverage Atual
 
 ![coverage](./ts-patterns/images/coverage-23-10-22.png)
