@@ -13,7 +13,7 @@ class GroceryStore extends BaseStore {
     if (name) this.name = name;
   }
 
-  async hasProduct(product: IProduct): Promise<StoreBranchHandler | null> {
+  hasProduct(product: IProduct): StoreBranchHandler | null {
     const foundProduct = this.products.find(
       storeProduct => storeProduct.name === product.name
     );
