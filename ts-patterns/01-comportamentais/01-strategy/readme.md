@@ -50,12 +50,6 @@ Também há possibilidade de construir uma Web API para desenvolvimento de um Ga
 
 Mais informações sobre o que cada _ator_ é capaz de fazer podem ser facilmente encontradas no descritivo de cada teste de unidade e integração.
 
-#### Coverage
-
-#### 100%
-
-![coverage](./01-example-street-fighter/images/coverage.png)
-
 
 </details>
 
