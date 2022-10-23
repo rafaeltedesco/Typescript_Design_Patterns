@@ -62,12 +62,17 @@ describe("Test a Sell Process started by a Buyer", () => {
       price: 42.7,
       quantity: 100,
     };
-    const storeStub = sinon.stub(storeBranch, "products").returns([mockTShirt]);
+    sinon.stub(Buyer, "askStoreForProductWithPrice").returns(mockTShirt);
+    buyableProduct = Buyer.askStoreForProductWithPrice(
+      new TShirt(),
+      storeBranch
+    ) as Buyable;
     const buyer = new Buyer("John Doe");
     buyer.setMoney(50.0);
     buyer.buyProduct(buyableProduct, storeBranch);
-    expect(storeBranch.products[0].quantity).toEqual(99);
+    expect(buyableProduct.quantity).toEqual(99);
+    expect(buyableProduct.name).toEqual("Mock T-Shirt");
     expect(storeBranch.balance).toBeCloseTo(42.7);
-    storeStub.restore();
+    sinon.restore();
   });
 });
