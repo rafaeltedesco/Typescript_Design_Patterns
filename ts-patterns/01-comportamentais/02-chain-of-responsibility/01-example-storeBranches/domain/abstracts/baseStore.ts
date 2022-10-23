@@ -7,8 +7,8 @@ abstract class BaseStore implements StoreBranchHandler {
   products: Buyable[] = [];
   next: StoreBranchHandler | null = null;
 
-  abstract hasProduct(product: IProduct): Promise<StoreBranchHandler | null>;
-  abstract sellProduct(product: Buyable): Promise<void>;
+  abstract hasProduct(product: IProduct): StoreBranchHandler | null;
+  abstract sellProduct(product: Buyable): void;
   setNext(store: StoreBranchHandler): void {
     this.next = store;
   }
