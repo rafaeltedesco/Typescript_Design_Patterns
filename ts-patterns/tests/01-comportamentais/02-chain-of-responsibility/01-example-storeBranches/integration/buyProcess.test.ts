@@ -1,4 +1,3 @@
-import sinon from "sinon";
 import BuaybleTShirt from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyableProducts/BuyabletShirt";
 import Buyer from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyer";
 import ClothingStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/clothingStore";
@@ -65,6 +64,5 @@ describe("Test a Sell Process started by a Buyer", () => {
     const product = storeBranch.products.at(0) as BuaybleTShirt;
     expect(product.quantity).toEqual(99);
     expect(storeBranch.balance).toBeCloseTo(42.7);
-    sinon.restore();
   });
 });
