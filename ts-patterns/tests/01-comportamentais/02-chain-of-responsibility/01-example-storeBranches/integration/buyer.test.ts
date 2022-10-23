@@ -67,4 +67,22 @@ describe("Test Buyer when interacting with other classes", () => {
       expect(storeSpy).toBeCalledTimes(1);
     });
   });
+  describe("Test a Sell Process started by a Buyer", () => {
+    it("should be capable of buy a BuyableProduct when have enough money", () => {
+      const tShirt = new TShirt();
+      const storeBranch = Buyer.askForAStoreToBuyProduct(
+        tShirt,
+        megaStore
+      ) as ClothingStore;
+      const buyableProduct = Buyer.askStoreForProductWithPrice(
+        tShirt,
+        storeBranch
+      );
+      const buyer = new Buyer("John Doe");
+      buyer.setMoney(50.0);
+      buyer.buy(buyableProduct, storeBranch);
+      expect(buyer.money).toEqual(7.3);
+      expect(buyer.boughtProducts).toContain(buyableProduct);
+    });
+  });
 });
