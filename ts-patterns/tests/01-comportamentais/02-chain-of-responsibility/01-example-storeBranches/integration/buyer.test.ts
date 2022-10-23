@@ -85,5 +85,22 @@ describe("Test Buyer when interacting with other classes", () => {
       expect(buyer.money).toBeCloseTo(7.3);
       expect(buyer.boughtProducts).toContain(buyableProduct);
     });
+    it("should not be capable of buy a BuyableProduct when don't have enough money", () => {
+      const tShirt = new TShirt();
+      const storeBranch = Buyer.askForAStoreToBuyProduct(
+        tShirt,
+        megaStore
+      ) as ClothingStore;
+      const buyableProduct = Buyer.askStoreForProductWithPrice(
+        tShirt,
+        storeBranch
+      ) as BuaybleTShirt;
+      const buyer = new Buyer("John Doe");
+      buyer.setMoney(40.0);
+      const buyError = () => buyer.buyProduct(buyableProduct, storeBranch);
+      expect(buyError).toThrow(
+        new Error("Sorry, you don't have enough money!")
+      );
+    });
   });
 });
