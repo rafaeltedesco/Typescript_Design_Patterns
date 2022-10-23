@@ -1,3 +1,4 @@
+import sinon from "sinon";
 import BuaybleTShirt from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyableProducts/BuyabletShirt";
 import Buyer from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyer";
 import ClothingStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/clothingStore";
@@ -55,11 +56,18 @@ describe("Test a Sell Process started by a Buyer", () => {
     buyer.buyProduct(buyableProduct, storeBranch);
     expect(canBuySpy).toBeCalledTimes(1);
   });
-  it("should call storeBranch.sellProduct when trying to buy a product", () => {
+  it("should call storeBranch.sellProduct when trying to buy a product and expect to decrease stock quantity and increase store balance", () => {
+    const mockTShirt: BuaybleTShirt = {
+      name: "Mock T-Shirt",
+      price: 42.7,
+      quantity: 100,
+    };
+    const storeStub = sinon.stub(storeBranch, "products").returns([mockTShirt]);
     const buyer = new Buyer("John Doe");
     buyer.setMoney(50.0);
-    const sellProductSpy = jest.spyOn(storeBranch, "sellProduct");
     buyer.buyProduct(buyableProduct, storeBranch);
-    expect(sellProductSpy).toBeCalledTimes(1);
+    expect(storeBranch.products[0].quantity).toEqual(99);
+    expect(storeBranch.balance).toBeCloseTo(42.7);
+    storeStub.restore();
   });
 });
