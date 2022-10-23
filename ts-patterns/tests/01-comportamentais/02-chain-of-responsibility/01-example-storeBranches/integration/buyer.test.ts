@@ -5,6 +5,7 @@ import GroceryStore from "../../../../../01-comportamentais/02-chain-of-responsi
 import MegaStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/megaStore";
 import PotatoChips from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/products/potatoChips";
 import TShirt from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/products/tShirt";
+import { Buyable } from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/interfaces/Iproduct";
 import StoreBranchHandler from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/interfaces/storeBranchHandler";
 
 describe("Test Buyer when interacting with other classes", () => {
@@ -48,8 +49,11 @@ describe("Test Buyer when interacting with other classes", () => {
       const storeBranch = Buyer.askForAStoreToBuyProduct(
         potatoChips,
         megaStore
+      ) as GroceryStore;
+      const buyableProduct: Buyable = Buyer.askStoreForPrice(
+        potatoChips,
+        storeBranch
       );
-      const buyableProduct = Buyer.askStoreForPrice(potatoChips, storeBranch);
       expect(buyableProduct).toBeInstanceOf(BuyablePotatoChips);
     });
   });
