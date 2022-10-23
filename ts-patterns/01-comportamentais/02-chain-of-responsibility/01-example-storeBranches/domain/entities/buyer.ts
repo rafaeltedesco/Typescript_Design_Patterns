@@ -39,8 +39,11 @@ class Buyer {
     this._money = money;
   }
 
-  static askStoreForProductWithPrice(product: IProduct, store: StoreBranchHandler): Buyable {
-    return new BuyablePotatoChips();
+  static askStoreForProductWithPrice(
+    product: IProduct,
+    store: StoreBranchHandler
+  ): Buyable | null {
+    return store.findProduct(product);
   }
 }
 
