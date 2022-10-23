@@ -46,3 +46,8 @@ Caso queira contribuir com mais exemplos, inclusive em outras linguagens, ou cas
 No mais, boas vindas! Espero que acima de tudo se diverta durante o processo de consulta e aprendizagem com os exemplos. 
 
 </p>
+
+
+### Coverage Atual
+
+![coverage](./ts-patterns/images/coverage-23-10-22.png)
