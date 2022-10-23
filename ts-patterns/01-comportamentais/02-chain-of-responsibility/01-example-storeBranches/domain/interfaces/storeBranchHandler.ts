@@ -6,6 +6,7 @@ interface StoreBranchHandler {
   products: Buyable[];
   next: StoreBranchHandler | null;
   balance: number;
+  setBalance(value: number): void;
   findProduct(product: IProduct): Buyable | null;
   hasProduct(product: IProduct): StoreBranchHandler | null;
   sellProduct(product: Buyable): void;

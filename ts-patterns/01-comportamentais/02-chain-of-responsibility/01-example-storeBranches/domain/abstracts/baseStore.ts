@@ -15,6 +15,10 @@ abstract class BaseStore implements StoreBranchHandler {
     this._balance += product.price;
   }
 
+  setBalance(value: number) {
+    this._balance = value;
+  }
+
   private decreaseProductQuantity(product: Buyable) {
     const productIdx = this.products.findIndex(
       storeProduct => storeProduct.name === product.name
@@ -28,6 +32,10 @@ abstract class BaseStore implements StoreBranchHandler {
 
   get balance(): number {
     return this._balance;
+  }
+
+  set balance(value: number) {
+    this._balance += value;
   }
 
   findProduct(product: IProduct): Buyable | null {
