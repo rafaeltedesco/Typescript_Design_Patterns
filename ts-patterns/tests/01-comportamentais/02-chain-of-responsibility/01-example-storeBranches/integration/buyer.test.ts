@@ -1,4 +1,5 @@
 import BuyablePotatoChips from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyableProducts/BuyablepotatoChips";
+import BuaybleTShirt from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyableProducts/BuyabletShirt";
 import Buyer from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyer";
 import ClothingStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/clothingStore";
 import GroceryStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/groceryStore";
@@ -77,11 +78,11 @@ describe("Test Buyer when interacting with other classes", () => {
       const buyableProduct = Buyer.askStoreForProductWithPrice(
         tShirt,
         storeBranch
-      );
+      ) as BuaybleTShirt;
       const buyer = new Buyer("John Doe");
       buyer.setMoney(50.0);
-      buyer.buy(buyableProduct, storeBranch);
-      expect(buyer.money).toEqual(7.3);
+      buyer.buyProduct(buyableProduct, storeBranch);
+      expect(buyer.money).toBeCloseTo(7.3);
       expect(buyer.boughtProducts).toContain(buyableProduct);
     });
   });
