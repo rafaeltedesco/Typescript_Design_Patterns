@@ -15,16 +15,3 @@
 ---
 
 ## <a href="./01-example-storeBranches" style="color:white;">01 - Store Branches Example</a>
-
-<img src="https://img.freepik.com/free-photo/abstract-blur-defocused-shopping-mall_1203-9543.jpg?w=1800&t=st=1666559892~exp=1666560492~hmac=94981c91f3abd7f3fe0f642e3a4f594bb47a260a9b41aa1d5db32f71b91de358" width="800">
-
-fonte: [freePik](https://www.freepik.com/free-photo/abstract-blur-defocused-shopping-mall_1255076.htm#query=stores&position=25&from_view=search&track=sph)
-
-<details>
-<summary>
-
-[Saiba mais](./01-example-storeBranches/)
-
-</summary>
-
-</details>
