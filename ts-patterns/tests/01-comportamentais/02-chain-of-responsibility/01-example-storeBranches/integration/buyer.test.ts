@@ -1,3 +1,4 @@
+import BuyablePotatoChips from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyableProducts/BuyablepotatoChips";
 import Buyer from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyer";
 import ClothingStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/clothingStore";
 import GroceryStore from "../../../../../01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/groceryStore";
@@ -41,6 +42,15 @@ describe("Test Buyer when interacting with other classes", () => {
       );
       Buyer.askForAStoreToBuyProduct(new TShirt(), new MegaStore());
       expect(searchSpy).toBeCalledTimes(1);
+    });
+    it("should askStoreForPrice and receive a Buyable version of a Product", () => {
+      const potatoChips = new PotatoChips();
+      const storeBranch = Buyer.askForAStoreToBuyProduct(
+        potatoChips,
+        megaStore
+      );
+      const buyableProduct = Buyer.askStoreForPrice(potatoChips, storeBranch);
+      expect(buyableProduct).toBeInstanceOf(BuyablePotatoChips);
     });
   });
 });
