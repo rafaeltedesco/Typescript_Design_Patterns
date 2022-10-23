@@ -34,7 +34,7 @@ abstract class BaseStore implements StoreBranchHandler {
     return this._balance;
   }
 
-  set balance(value: number) {
+  increaseBalance(value: number) {
     this._balance += value;
   }
 
