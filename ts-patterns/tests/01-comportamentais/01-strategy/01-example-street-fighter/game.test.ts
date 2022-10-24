@@ -1,9 +1,9 @@
 import path from "path";
-import Game from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/game";
-import Akuma from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/akuma";
-import Balrog from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/balrog";
-import Narrator from "../../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/narrator";
-import reader from "../../../../../utils/jsonFileReader";
+import Game from "../../../../01-comportamentais/01-strategy/01-example-street-fighter/game";
+import Akuma from "../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/akuma";
+import Balrog from "../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/balrog";
+import Narrator from "../../../../01-comportamentais/01-strategy/01-example-street-fighter/players/narrator";
+import reader from "../../../../utils/jsonFileReader";
 import FakeMockAttack from "./mocks/DumyMockAttack";
 import FakeMockPlayer from "./mocks/DumyMockFighter";
 

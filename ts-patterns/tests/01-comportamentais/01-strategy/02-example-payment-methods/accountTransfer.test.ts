@@ -1,7 +1,7 @@
-import Account from "../../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/entities/account";
-import DOC from "../../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/strategies/doc";
-import PaymentSlip from "../../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/strategies/paymentSlip";
-import TED from "../../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/strategies/ted";
+import Account from "../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/entities/account";
+import DOC from "../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/strategies/doc";
+import PaymentSlip from "../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/strategies/paymentSlip";
+import TED from "../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/strategies/ted";
 
 describe("Test Account Transfer", () => {
   describe("Transfer to another Account", () => {

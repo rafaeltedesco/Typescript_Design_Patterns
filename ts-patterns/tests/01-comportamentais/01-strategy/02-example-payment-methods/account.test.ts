@@ -1,4 +1,4 @@
-import Account from "../../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/entities/account";
+import Account from "../../../../01-comportamentais/01-strategy/02-example-payment-methods/domain/entities/account";
 
 describe("Test an Account", () => {
   describe("Test Deposit", () => {
