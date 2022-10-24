@@ -57,5 +57,11 @@ describe("Test Narrator", () => {
       expect(narrator.tellStory()).toEqual(balrogStory);
       expect(font).toEqual("mockedVersion");
     });
+    it("should return I don't know any story yet when this.story is empty", async () => {
+      const narratorWithoutStsory = new Narrator();
+      expect(narratorWithoutStsory.tellStory()).toEqual(
+        "I don't know any story yet"
+      );
+    });
   });
 });
