@@ -14,7 +14,7 @@
 
 ---
 
-## <a href="./01-example-storeBranches" style="color:white;">01 - Store Branches Example</a>
+## 01 - Store Branches Example
 
 <img src="https://img.freepik.com/free-photo/abstract-blur-defocused-shopping-mall_1203-9543.jpg?w=1800&t=st=1666559892~exp=1666560492~hmac=94981c91f3abd7f3fe0f642e3a4f594bb47a260a9b41aa1d5db32f71b91de358" width="800">
 
@@ -35,7 +35,7 @@ Esse exemplo foi criado com o intuito de demonstrar uma das possíveis aplicaç�
 
 Quando o método searchProductsInBranches da `MegaStore` é invocado, ela inicializa a _Chain_ no contexto que foi produzido pelo `client` da aplicação. (Portanto, se faz necessário a construção da _Chain_, atribuindo a cadeia de responsabilidades a cada uma das lojas que fazem parte da `MegaStore`).
 
-É possível ter mais visibilidade sobre a construção desse contexto, observando os [testes](../../tests/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/integration/buyProcess.test.ts)
+É possível ter mais visibilidade sobre a construção desse contexto, observando os [testes](../../../tests/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/integration/buyProcess.test.ts)
 
 Na aplicação após o produto ser encontrado, a respectiva _Store_ é devolvida. Como se a `MegaStore` estivesse informando onde a pessoa interessada poderia encontrar o produto.
 
@@ -49,8 +49,8 @@ Obs: As demais implementações do projeto não fazem parte do padrão _Chain Of
 
 O padrão *CoR* pode ser encontrado na implementação do método _hasProduct_ das classes que extendem a `baseStore`, sendo atualmente:
 
-- [clothingStore](./01-example-storeBranches/domain/entities/clothingStore.ts)
-- [groceryStore](./01-example-storeBranches/domain/entities/groceryStore.ts)
+- [clothingStore](./domain/entities/clothingStore.ts)
+- [groceryStore](./domain/entities/groceryStore.ts)
 
 
 A seguir o diagrama de classes representando melhor o funcionamento da aplicação.

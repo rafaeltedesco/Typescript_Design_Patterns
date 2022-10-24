@@ -11,7 +11,8 @@
 </div>
 
 ---
-## <a href="./02-example-payment-methods" style="color:white;">02 - Payment Methods Example</a>
+
+## 02 - Payment Methods Example
 
 <img src="https://img.freepik.com/free-photo/close-up-customer-paying-by-credit-card_329181-2048.jpg?w=740&t=st=1666301329~exp=1666301929~hmac=89cbb2341b51f19f9b22c5e013b0b90a3f097bbe4bb164b05e2755b7665ba995" width="800"/>
 
@@ -24,7 +25,7 @@ fonte: [freepik](https://www.freepik.com/free-photo/close-up-customer-paying-by-
 
 </summary>
 
-As _Strategies_ podem facilmente ser encontradas na pasta [strategies](./02-example-payment-methods/domain/strategies/). São os métodos de pagamento.
+As _Strategies_ podem facilmente ser encontradas na pasta [strategies](./domain/strategies/). São os métodos de pagamento.
 
 As _Strategies_ foram criadas para resolver o problema gerado ao aplicar um algoritmo diferente de desconto para cada forma de pagamento solicitada pelo cliente.
 

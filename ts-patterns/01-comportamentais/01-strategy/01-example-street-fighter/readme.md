@@ -11,7 +11,7 @@
 </div>
 
 ---
-## <a href="./01-example-street-fighter" style="color:white;">01 - Street Fighter Example</a>
+## 01 - Street Fighter Example
 
 <img src="https://img.redbull.com/images/c_crop,x_0,y_0,h_720,w_1280/c_fill,w_910,h_512/q_auto,f_auto/redbullcom/2017/05/26/f54674bf-425f-489a-9e9a-b4c899d03ad8/ultra-street-fighter-2-character-selection-screen" width="800">
 
