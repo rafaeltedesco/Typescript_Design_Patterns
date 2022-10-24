@@ -46,4 +46,8 @@ describe("Test Stores", () => {
     store.increaseBalance(10);
     expect(store.balance).toEqual(10);
   });
+  it("should return null when product not find", () => {
+    const store = new GroceryStore();
+    expect(store.findProduct(new TShirt())).toBeNull();
+  });
 });
