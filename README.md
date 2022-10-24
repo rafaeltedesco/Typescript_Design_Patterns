@@ -24,9 +24,11 @@ Os exemplos aqui reunidos podem ser adaptações de materiais encontrados em cur
 
 Um guia de consulta com diversos exemplos aplicados para possibilitar o entendimento em variados contextos;
 
-Os exemplos buscam fornecer um contexto mais próximo da realidade, do que apenas receitas prontas.
+Para fins didáticos, os exemplos foram projetados com o objetivo de se aproximar da realidade, "injetando" algum pattern para resolução de um dado problema. 
 
-Para fins didáticos, os exemplos foram projetados com algum pattern em mente os mesmos foram "injetados" para resolução de um dado problema.
+Portanto, nesse _repo_ você poderá encontrar projetos maiores, onde o pattern é utilizado em algum trecho dele e não necessariamente encontrará somente o pattern.
+
+Entretanto, em cada seção uma explicação sobre o Pattern utilizado e sua forma de uso, estará disponível.
 
 </p>
 </details>
