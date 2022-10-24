@@ -74,4 +74,4 @@ No mais, boas vindas! Espero que acima de tudo se diverta durante o processo de 
 
 ### Code Coverage Atual
 
-![coverage](./ts-patterns/images/coverage-23-10-22.png)
+![coverage](./ts-patterns/images/coverage.png)
