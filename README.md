@@ -24,13 +24,19 @@ Os exemplos aqui reunidos podem ser adaptações de materiais encontrados em cur
 
 Um guia de consulta com diversos exemplos aplicados para possibilitar o entendimento em variados contextos;
 
+Os exemplos buscam fornecer um contexto mais próximo da realidade, do que apenas receitas prontas.
+
+Para fins didáticos, os exemplos foram projetados com algum pattern em mente os mesmos foram "injetados" para resolução de um dado problema.
+
 </p>
 </details>
 
 <details><summary>O que NÃO é esse repositório</summary>
 <p>
 
-Uma referência completa e absoluta sobre Design Patterns.
+Uma referência completa e absoluta sobre Design Patterns e única fonte de resolução de um problema de Design de Código.
+
+Existem várias abordagens possíveis e patterns diferentes que poderiam ser utilizados para resolução.
 
 </p>
 </details>
