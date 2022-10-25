@@ -12,6 +12,7 @@ import {
   Mango,
   Apple,
 } from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthlyFoods";
+import FoodOutput from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/types/foodOutput";
 
 describe("Test Non Fit Person", () => {
   const nonFitPerson = new NonFitPerson("John Doe", 999);
@@ -28,11 +29,11 @@ describe("Test Non Fit Person", () => {
     new OrangeJuice(),
   ];
 
-  const unhealthlyFoodsOutput = [
-    "Hamburger",
-    "Pizza",
-    "French Fries",
-    "Snacks",
+  const unhealthlyFoodsOutput: FoodOutput[] = [
+    { name: "Hamburger", isHealthy: false },
+    { name: "Pizza", isHealthy: false },
+    { name: "French Fries", isHealthy: false },
+    { name: "Snacks", isHealthy: false },
   ];
 
   it("should buy unHealthly products", () => {
