@@ -37,7 +37,17 @@ describe("Test Food", () => {
     unHealthlyFoods.forEach(food => nonFitPerson.buy(food));
     unHealthlyFoods.forEach(food => nonFitPerson.buy(food));
 
-    expect(fitPerson.boughtedFoods).toEqual(healthlyFoods);
-    expect(nonFitPerson.boughtedFoods).toEqual(unHealthlyFoods);
+    expect(fitPerson.boughtedFoods).toEqual([
+      "Apple",
+      "Orange Juice",
+      "Mango",
+      "Broccoli",
+    ]);
+    expect(nonFitPerson.boughtedFoods).toEqual([
+      "Hamburger",
+      "Snacks",
+      "French Fries",
+      "Pizza",
+    ]);
   });
 });

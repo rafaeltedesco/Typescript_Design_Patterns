@@ -28,13 +28,20 @@ describe("Test Non Fit Person", () => {
     new OrangeJuice(),
   ];
 
+  const unhealthlyFoodsOutput = [
+    "Hamburger",
+    "Pizza",
+    "French Fries",
+    "Snacks",
+  ];
+
   it("should buy unHealthly products", () => {
     unhealthlyFoods.forEach(food => nonFitPerson.buy(food));
-    expect(nonFitPerson.boughtedFoods).toEqual(unhealthlyFoods);
+    expect(nonFitPerson.boughtedFoods).toEqual(unhealthlyFoodsOutput);
     expect(nonFitPerson.name).toEqual("John Doe");
   });
   it("should not buy healthy foods", () => {
     healthyFoods.forEach(food => nonFitPerson.buy(food));
-    expect(nonFitPerson.boughtedFoods).toEqual(unhealthlyFoods);
+    expect(nonFitPerson.boughtedFoods).toEqual(unhealthlyFoodsOutput);
   });
 });
