@@ -5,5 +5,9 @@ class OrangeJuice implements IFood {
   price = 9.9;
   quantity = 22;
   isHealthy = true;
+
+  constructor(price: number) {
+    this.price = price;
+  }
 }
 export default OrangeJuice;
