@@ -9,5 +9,9 @@ class Broccoli implements IFood {
   constructor(price?: number) {
     if (price) this.price = price;
   }
+
+  sell(): void {
+    this.quantity -= 1;
+  }
 }
 export default Broccoli;
