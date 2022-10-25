@@ -2,17 +2,17 @@ import Broccoli from "../foods/healthlyFoods/broccoli";
 
 class FitPerson {
   private _name: string;
-  private _boughtedProducts: Broccoli[] = [];
+  private _boughtedFoods: Broccoli[] = [];
   constructor(name: string) {
     this._name = name;
   }
 
   buy(food: Broccoli) {
-    this._boughtedProducts.push(food);
+    this._boughtedFoods.push(food);
   }
 
-  get boughtedProducts(): Broccoli[] {
-    return [...this._boughtedProducts];
+  get boughtedFoods(): Broccoli[] {
+    return [...this._boughtedFoods];
   }
 }
 

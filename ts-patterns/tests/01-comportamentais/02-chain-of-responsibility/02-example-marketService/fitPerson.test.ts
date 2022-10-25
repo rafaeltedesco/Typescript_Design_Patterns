@@ -6,6 +6,6 @@ describe("Test Fit Person", () => {
     const fitPerson = new FitPerson("John Doe");
     const healthlyProduct = new Broccoli();
     fitPerson.buy(healthlyProduct);
-    expect(fitPerson.boughtedProducts).toContain(healthlyProduct);
+    expect(fitPerson.boughtedFoods).toContain(healthlyProduct);
   });
 });
