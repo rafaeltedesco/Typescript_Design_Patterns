@@ -47,5 +47,11 @@ describe("Test Base Person behavior in classes that extends it", () => {
       unHealthyFoods.forEach(food => nonFitPerson.buy(food));
       expect(nonFitPerson.boughtedFoods).not.toContain(hamburger);
     });
+    it("should end with 5.5 when started with 20 and buy a product that costs 10 and another product that costs 5.5", () => {
+      const nonFitPerson = new FitPerson("John Doe", 20);
+      const unHealthlyFoods = [new Pizza(10), new FrenchFries(5.5)];
+      unHealthlyFoods.forEach(food => nonFitPerson.buy(food));
+      expect(nonFitPerson.money).toEqual(5.5);
+    });
   });
 });
