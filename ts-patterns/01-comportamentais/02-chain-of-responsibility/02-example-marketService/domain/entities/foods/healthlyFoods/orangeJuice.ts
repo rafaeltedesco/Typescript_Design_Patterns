@@ -6,8 +6,8 @@ class OrangeJuice implements IFood {
   quantity = 22;
   isHealthy = true;
 
-  constructor(price: number) {
-    this.price = price;
+  constructor(price?: number) {
+    if (price) this.price = price;
   }
 }
 export default OrangeJuice;
