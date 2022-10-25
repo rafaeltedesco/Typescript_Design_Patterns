@@ -1,7 +1,9 @@
-import Hamburger from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/unHealthyFoods/hamburger";
-import Pizza from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/unHealthyFoods/pizza";
-import FrenchFries from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/unHealthyFoods/frenchFries";
-import Snacks from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/unHealthyFoods/snacks";
+import {
+  Hamburger,
+  Pizza,
+  FrenchFries,
+  Snacks,
+} from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/unHealthyFoods";
 import NonFitPerson from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/persons/nonFitPerson";
 import IFood from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/interfaces/ifood";
 import {
