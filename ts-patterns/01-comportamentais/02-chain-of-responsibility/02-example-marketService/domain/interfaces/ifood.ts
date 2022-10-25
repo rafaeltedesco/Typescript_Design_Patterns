@@ -4,6 +4,7 @@ interface IFood {
   quantity: number;
   isHealthy: boolean;
   sell(): void;
+  hasInStock(): boolean;
 }
 
 export default IFood;
