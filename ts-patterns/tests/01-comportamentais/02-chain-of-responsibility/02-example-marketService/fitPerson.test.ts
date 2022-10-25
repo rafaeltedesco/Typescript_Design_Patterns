@@ -16,10 +16,8 @@ describe("Test Fit Person", () => {
     const apple = new Apple();
     const healthlyFoods = [broccoli, mango, orangeJuice, apple];
     healthlyFoods.forEach(food => fitPerson.buy(food));
-    expect(fitPerson.boughtedFoods).toContain(broccoli);
-    expect(fitPerson.boughtedFoods).toContain(mango);
-    expect(fitPerson.boughtedFoods).toContain(orangeJuice);
-    expect(fitPerson.boughtedFoods).toContain(apple);
+    expect(fitPerson.boughtedFoods).toEqual(healthlyFoods);
+    fitPerson.boughtedFoods.forEach(food => food.isHealthly);
     expect(fitPerson.name).toEqual("John Doe");
   });
 });
