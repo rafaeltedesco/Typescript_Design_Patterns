@@ -22,6 +22,10 @@ abstract class BaseFood implements IFood {
   sell(): void {
     this._quantity -= 1;
   }
+
+  hasInStock(): boolean {
+    return this._quantity > 0;
+  }
 }
 
 export default BaseFood;
