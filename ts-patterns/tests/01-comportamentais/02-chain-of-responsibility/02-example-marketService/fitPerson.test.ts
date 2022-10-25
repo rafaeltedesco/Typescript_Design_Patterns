@@ -16,6 +16,9 @@ describe("Test Fit Person", () => {
     fitPerson.buy(orangeJuice);
     fitPerson.buy(apple);
     expect(fitPerson.boughtedFoods).toContain(broccoli);
+    expect(fitPerson.boughtedFoods).toContain(mango);
+    expect(fitPerson.boughtedFoods).toContain(orangeJuice);
+    expect(fitPerson.boughtedFoods).toContain(apple);
     expect(fitPerson.name).toEqual("John Doe");
   });
 });
