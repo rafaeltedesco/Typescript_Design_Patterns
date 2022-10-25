@@ -1,17 +1,7 @@
-import IFood from "../../../interfaces/ifood";
+import BaseFood from "../baseFood";
 
-class Broccoli implements IFood {
+class Broccoli extends BaseFood {
   name = "Broccoli";
-  price = 5.4;
-  quantity = 10;
   isHealthy = true;
-
-  constructor(price?: number) {
-    if (price) this.price = price;
-  }
-
-  sell(): void {
-    this.quantity -= 1;
-  }
 }
 export default Broccoli;
