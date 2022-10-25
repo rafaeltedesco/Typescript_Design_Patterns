@@ -17,7 +17,7 @@ describe("Test Fit Person", () => {
     const healthlyFoods = [broccoli, mango, orangeJuice, apple];
     healthlyFoods.forEach(food => fitPerson.buy(food));
     expect(fitPerson.boughtedFoods).toEqual(healthlyFoods);
-    fitPerson.boughtedFoods.forEach(food => food.isHealthly);
+    fitPerson.boughtedFoods.forEach(food => food.isHealthy);
     expect(fitPerson.name).toEqual("John Doe");
   });
 });
