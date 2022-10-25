@@ -5,5 +5,9 @@ class Mango implements IFood {
   price = 4.8;
   quantity = 7;
   isHealthy = true;
+
+  constructor(price?: number) {
+    if (price) this.price = price;
+  }
 }
 export default Mango;

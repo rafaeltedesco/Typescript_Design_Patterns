@@ -5,5 +5,9 @@ class Broccoli implements IFood {
   price = 5.4;
   quantity = 10;
   isHealthy = true;
+
+  constructor(price?: number) {
+    if (price) this.price = price;
+  }
 }
 export default Broccoli;

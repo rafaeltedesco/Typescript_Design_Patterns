@@ -5,5 +5,9 @@ class Apple implements IFood {
   price = 2.4;
   quantity = 15;
   isHealthy = true;
+
+  constructor(price?: number) {
+    if (price) this.price = price;
+  }
 }
 export default Apple;
