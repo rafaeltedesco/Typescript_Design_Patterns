@@ -15,6 +15,7 @@ abstract class BasePerson {
 
   buy(food: IFood) {
     this._money -= food.price;
+    food.sell();
     this._boughtedFoods.push(food);
   }
 
