@@ -1,3 +1,4 @@
+import FoodOutput from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/types/foodOutput";
 import {
   Apple,
   Broccoli,
@@ -25,8 +26,9 @@ describe("Test Base Person behavior in classes that extends it", () => {
     ];
     it("should not buy Broccoli if don't have enough money", () => {
       const fitPerson = new FitPerson("John Doe", 18);
+      const expected: FoodOutput = { name: "Broccoli", isHealthy: true };
       healthyFoods.forEach(food => fitPerson.buy(food));
-      expect(fitPerson.boughtedFoods).not.toContain("Broccoli");
+      expect(fitPerson.boughtedFoods).not.toContain(expected);
     });
     it("should end with 9.0 when started with 12 and buy two products that costs 1.5", () => {
       const fitPerson = new FitPerson("John Doe", 12);
@@ -37,6 +39,7 @@ describe("Test Base Person behavior in classes that extends it", () => {
   });
   describe("NonFitPerson cannot buy Hamburger of a list of foods when don't have enough money", () => {
     const hamburger = new Hamburger(42);
+    const expected: FoodOutput = { name: "Hamburger", isHealthy: false };
     const unHealthyFoods = [
       new FrenchFries(5),
       new Snacks(2),
@@ -46,7 +49,7 @@ describe("Test Base Person behavior in classes that extends it", () => {
     it("should not buy hamburger if don't have enough money", () => {
       const nonFitPerson = new NonFitPerson("John Doe", 35);
       unHealthyFoods.forEach(food => nonFitPerson.buy(food));
-      expect(nonFitPerson.boughtedFoods).not.toContain("Hamburger");
+      expect(nonFitPerson.boughtedFoods).not.toContain(expected);
     });
     it("should end with 4.5 when started with 20 and buy a product that costs 10 and another product that costs 5.5", () => {
       const nonFitPerson = new NonFitPerson("John Doe", 20);

@@ -13,6 +13,7 @@ import {
 
 import FitPerson from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/persons/fitPerson";
 import NonFitPerson from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/persons/nonFitPerson";
+import FoodOutput from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/types/foodOutput";
 
 describe("Test Food", () => {
   const healthlyFoods = [
@@ -37,17 +38,20 @@ describe("Test Food", () => {
     unHealthlyFoods.forEach(food => nonFitPerson.buy(food));
     unHealthlyFoods.forEach(food => nonFitPerson.buy(food));
 
-    expect(fitPerson.boughtedFoods).toEqual([
-      "Apple",
-      "Orange Juice",
-      "Mango",
-      "Broccoli",
-    ]);
-    expect(nonFitPerson.boughtedFoods).toEqual([
-      "Hamburger",
-      "Snacks",
-      "French Fries",
-      "Pizza",
-    ]);
+    const expectedFit: FoodOutput[] = [
+      { name: "Apple", isHealthy: true },
+      { name: "Orange Juice", isHealthy: true },
+      { name: "Mango", isHealthy: true },
+      { name: "Broccoli", isHealthy: true },
+    ];
+
+    expect(fitPerson.boughtedFoods).toEqual(expectedFit);
+    const expectedNonFit: FoodOutput[] = [
+      { name: "Hamburger", isHealthy: false },
+      { name: "Snacks", isHealthy: false },
+      { name: "French Fries", isHealthy: false },
+      { name: "Pizza", isHealthy: false },
+    ];
+    expect(nonFitPerson.boughtedFoods).toEqual(expectedNonFit);
   });
 });
