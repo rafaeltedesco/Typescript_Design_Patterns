@@ -14,7 +14,7 @@ import {
 } from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthlyFoods";
 
 describe("Test Non Fit Person", () => {
-  const nonFitPerson = new NonFitPerson("John Doe");
+  const nonFitPerson = new NonFitPerson("John Doe", 999);
   const unhealthlyFoods = [
     new Hamburger(),
     new Pizza(),
