@@ -27,6 +27,12 @@ describe("Test Base Person behavior in classes that extends it", () => {
       healthyFoods.forEach(food => fitPerson.buy(food));
       expect(fitPerson.boughtedFoods).not.toContain(broccoli);
     });
+    it("should end with 9.0 when started with 12 and buy two products that costs 1.5", () => {
+      const fitPerson = new FitPerson("John Doe", 12);
+      const healthlyFoods = [new Mango(1.5), new Apple(1.5)];
+      healthlyFoods.forEach(food => fitPerson.buy(food));
+      expect(fitPerson.money).toEqual(9.0);
+    });
   });
   describe("NonFitPerson cannot buy Hamburger of a list of foods when don't have enough money", () => {
     const hamburger = new Hamburger(42);
