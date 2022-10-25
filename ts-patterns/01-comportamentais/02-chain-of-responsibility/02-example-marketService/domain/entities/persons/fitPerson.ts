@@ -1,10 +1,12 @@
 import IFood from "../../interfaces/ifood";
+import BasePerson from "./abstracts/basePerson";
 
-class FitPerson {
+class FitPerson extends BasePerson {
   private _money = 0;
   private _name: string;
   private _boughtedFoods: IFood[] = [];
   constructor(name: string, money?: number) {
+    super();
     this._name = name;
     if (money) this._money = money;
   }
