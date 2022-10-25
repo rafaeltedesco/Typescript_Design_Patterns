@@ -6,5 +6,9 @@ describe("Test Market", () => {
       const market = new Market();
       expect(market.balance).toEqual(0);
     });
+    it("should start with no foods", () => {
+      const market = new Market();
+      expect(market.foods).toEqual([]);
+    });
   });
 });
