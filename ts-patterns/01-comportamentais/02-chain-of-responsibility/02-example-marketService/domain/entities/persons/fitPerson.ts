@@ -1,10 +1,12 @@
 import IFood from "../../interfaces/ifood";
 
 class FitPerson {
+  private _money = 0;
   private _name: string;
   private _boughtedFoods: IFood[] = [];
-  constructor(name: string) {
+  constructor(name: string, money?: number) {
     this._name = name;
+    if (money) this._money = money;
   }
 
   buy(food: IFood) {
