@@ -14,8 +14,9 @@ abstract class BasePerson {
   }
 
   buy(food: IFood) {
-    this._money -= food.price;
+    if (!food.hasInStock()) return;
     food.sell();
+    this._money -= food.price;
     this._boughtedFoods.push(food);
   }
 
