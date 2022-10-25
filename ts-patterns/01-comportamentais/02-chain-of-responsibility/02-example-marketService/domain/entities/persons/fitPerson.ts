@@ -8,7 +8,7 @@ class FitPerson {
   }
 
   buy(food: IFood) {
-    this._boughtedFoods.push(food);
+    if (food.isHealthy) this._boughtedFoods.push(food);
   }
 
   get boughtedFoods(): IFood[] {
