@@ -1,15 +1,24 @@
 import IFood from "../../interfaces/ifood";
 
 class NonFitPerson {
+  private _money = 0;
   private _name: string;
   private _boughtedFoods: IFood[] = [];
 
-  constructor(name: string) {
+  constructor(name: string, money?: number) {
     this._name = name;
+    if (money) this._money = money;
   }
 
   buy(food: IFood) {
-    if (!food.isHealthy) this._boughtedFoods.push(food);
+    if (!food.isHealthy && this.hasEnoughMoney(food)) {
+      this._money -= food.price;
+      this._boughtedFoods.push(food);
+    }
+  }
+
+  private hasEnoughMoney(food: IFood): boolean {
+    return this._money - food.price >= 0;
   }
 
   get boughtedFoods(): IFood[] {
