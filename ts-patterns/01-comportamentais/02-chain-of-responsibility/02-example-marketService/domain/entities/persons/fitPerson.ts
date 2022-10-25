@@ -14,6 +14,10 @@ class FitPerson {
   get boughtedFoods(): Broccoli[] {
     return [...this._boughtedFoods];
   }
+
+  get name(): string {
+    return this._name;
+  }
 }
 
 export default FitPerson;
