@@ -14,7 +14,7 @@ import {
 import FitPerson from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/persons/fitPerson";
 
 describe("Test Fit Person", () => {
-  const fitPerson = new FitPerson("John Doe");
+  const fitPerson = new FitPerson("John Doe", 999);
   const healthyFoods = [
     new Broccoli(),
     new Mango(),
