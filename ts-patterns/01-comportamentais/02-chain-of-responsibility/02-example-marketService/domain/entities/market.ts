@@ -11,6 +11,10 @@ class Market {
   get foods(): IFood[] {
     return [...this._foods];
   }
+
+  addFoods(...foods: IFood[]) {
+    this._foods.push(...foods);
+  }
 }
 
 export default Market;
