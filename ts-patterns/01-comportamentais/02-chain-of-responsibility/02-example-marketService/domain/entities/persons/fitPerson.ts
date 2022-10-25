@@ -1,17 +1,17 @@
-import Broccoli from "../foods/healthlyFoods/broccoli";
+import IFood from "../../interfaces/ifood";
 
 class FitPerson {
   private _name: string;
-  private _boughtedFoods: Broccoli[] = [];
+  private _boughtedFoods: IFood[] = [];
   constructor(name: string) {
     this._name = name;
   }
 
-  buy(food: Broccoli) {
+  buy(food: IFood) {
     this._boughtedFoods.push(food);
   }
 
-  get boughtedFoods(): Broccoli[] {
+  get boughtedFoods(): IFood[] {
     return [...this._boughtedFoods];
   }
 
