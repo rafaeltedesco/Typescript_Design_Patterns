@@ -54,4 +54,10 @@ describe("Test Base Person behavior in classes that extends it", () => {
       expect(nonFitPerson.money).toEqual(5.5);
     });
   });
+  describe("Test if NonFitPerson and FitPerson extends from BasePerson", () => {
+    const nonFitPerson = new NonFitPerson("John Doe");
+    const fitPerson = new FitPerson("Also John Doe");
+    expect(nonFitPerson).toBeInstanceOf(BasePerson);
+    expect(fitPerson).toBeInstanceOf(BasePerson);
+  });
 });
