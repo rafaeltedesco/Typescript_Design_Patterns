@@ -10,7 +10,14 @@ class FitPerson {
   }
 
   buy(food: IFood) {
-    if (food.isHealthy) this._boughtedFoods.push(food);
+    if (food.isHealthy && this.hasEnoughMoney(food)) {
+      this._money -= food.price;
+      this._boughtedFoods.push(food);
+    }
+  }
+
+  private hasEnoughMoney(food: IFood): boolean {
+    return this._money - food.price >= 0;
   }
 
   get boughtedFoods(): IFood[] {
