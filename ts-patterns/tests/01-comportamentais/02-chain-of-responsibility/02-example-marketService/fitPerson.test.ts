@@ -1,8 +1,11 @@
-import Broccoli from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthlyFoods/broccoli";
+import {
+  Broccoli,
+  Mango,
+  OrangeJuice,
+  Apple,
+} from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthlyFoods";
+
 import FitPerson from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/persons/fitPerson";
-import Mango from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthlyFoods/mango";
-import OrangeJuice from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthlyFoods/orangeJuice";
-import Apple from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthlyFoods/apple";
 
 describe("Test Fit Person", () => {
   it("should buy healthly products", () => {
