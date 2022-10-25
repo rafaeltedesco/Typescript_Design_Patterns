@@ -10,6 +10,10 @@ class NonFitPerson {
     if (money) this._money = money;
   }
 
+  get money(): number {
+    return this._money;
+  }
+
   buy(food: IFood) {
     if (!food.isHealthy && this.hasEnoughMoney(food)) {
       this._money -= food.price;
