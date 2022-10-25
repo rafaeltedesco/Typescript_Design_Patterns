@@ -14,10 +14,8 @@ describe("Test Fit Person", () => {
     const mango = new Mango();
     const orangeJuice = new OrangeJuice();
     const apple = new Apple();
-    fitPerson.buy(broccoli);
-    fitPerson.buy(mango);
-    fitPerson.buy(orangeJuice);
-    fitPerson.buy(apple);
+    const healthlyFoods = [broccoli, mango, orangeJuice, apple];
+    healthlyFoods.forEach(food => fitPerson.buy(food));
     expect(fitPerson.boughtedFoods).toContain(broccoli);
     expect(fitPerson.boughtedFoods).toContain(mango);
     expect(fitPerson.boughtedFoods).toContain(orangeJuice);
