@@ -9,6 +9,7 @@
     "start:payment-methods": "ts-node ./01-comportamentais/01-strategy/02-example-payment-methods/client.ts",
     "test:payment-methods": "npx jest tests/01-comportamentais/01-strategy/02-example-payment-methods",
     "test:store-branches": "npx jest tests/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches",
+    "test:market-service": "npx jest tests/01-comportamentais/02-chain-of-responsibility/02-example-marketService",
     "test": "npx jest",
     "test:coverage": "npx jest --coverage",
     "test:watch": "npx jest --watchAll --coverage",
