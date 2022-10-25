@@ -2,7 +2,7 @@ import { Hamburger } from "../../../../01-comportamentais/02-chain-of-responsibi
 import Market from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/market";
 import FitPerson from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/persons/fitPerson";
 import NonFitPerson from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/persons/nonFitPerson";
-import MarketService from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/marketService";
+import MarketService from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/marketService";
 import FoodOutput from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/types/foodOutput";
 
 describe("Test Chain Of Responsibility", () => {
