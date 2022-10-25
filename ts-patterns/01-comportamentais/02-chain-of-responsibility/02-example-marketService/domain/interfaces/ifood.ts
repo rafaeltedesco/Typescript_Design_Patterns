@@ -2,7 +2,7 @@ interface IFood {
   name: string;
   price: number;
   quantity: number;
-  isHealthly: boolean;
+  isHealthy: boolean;
 }
 
 export default IFood;
