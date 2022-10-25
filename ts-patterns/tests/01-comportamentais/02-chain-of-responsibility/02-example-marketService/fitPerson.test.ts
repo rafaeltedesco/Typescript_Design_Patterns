@@ -7,5 +7,6 @@ describe("Test Fit Person", () => {
     const healthlyProduct = new Broccoli();
     fitPerson.buy(healthlyProduct);
     expect(fitPerson.boughtedFoods).toContain(healthlyProduct);
+    expect(fitPerson.name).toEqual("John Doe");
   });
 });
