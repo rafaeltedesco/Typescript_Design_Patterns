@@ -1,13 +1,23 @@
 import IFood from "../../../interfaces/ifood";
 import FoodOutput from "../../../../types/foodOutput";
+import IPerson from "../../../interfaces/iperson";
 
-abstract class BasePerson {
+abstract class BasePerson implements IPerson {
   protected _money = 0;
   protected _name: string;
   protected _boughtedFoods: FoodOutput[] = [];
+  private _next: IPerson | undefined;
   constructor(name: string, money?: number) {
     this._name = name;
     if (money) this._money = money;
+  }
+
+  get next(): IPerson {
+    return this._next as IPerson;
+  }
+
+  setNext(person: IPerson): void {
+    this._next = person;
   }
 
   get money(): number {
