@@ -12,7 +12,7 @@
 
 ---
 
-## <a href="./01-example-street-fighter" style="color:white;">01 - Street Fighter Example</a>
+## <a href="./01-example-street-fighter" style="color:white;">01 - Street Fighter Story Teller Example</a>
 
 ---
 ## <a href="./02-example-payment-methods" style="color:white;">02 - Payment Methods Example</a>
