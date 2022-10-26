@@ -82,6 +82,4 @@ No mais, boas vindas! Espero que acima de tudo se diverta durante o processo de 
 
 --- 
 
-### Code Coverage Atual
-
-[coverage](./ts-patterns/coverage/lcov-report/index.html)
+[ ### Code Coverage Atual ](./ts-patterns/coverage)
