@@ -82,4 +82,4 @@ No mais, boas vindas! Espero que acima de tudo se diverta durante o processo de 
 
 --- 
 
-[ ### Code Coverage Atual ](./ts-patterns/coverage)
+[Code Coverage Atual](./ts-patterns/coverage)
