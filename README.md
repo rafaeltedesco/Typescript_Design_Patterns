@@ -82,4 +82,26 @@ No mais, boas vindas! Espero que acima de tudo se diverta durante o processo de 
 
 ### Code Coverage Atual: 100%
 
-[Confira todos os testes](./ts-patterns/tests/)
+#### Confira todos os testes
+
+#### Comportamentais
+
+
+<details>
+
+<summary> Strategy</summary>
+
+- 01: [Street Fighter StoryTeller Test](./ts-patterns/tests/01-comportamentais/01-strategy/01-example-street-fighter/)
+
+- 02: [Payment Methods Test](./ts-patterns/tests/01-comportamentais/01-strategy/02-example-payment-methods/)
+
+</details>
+
+<details>
+<summary> Chain Of Responsibility</summary>
+
+- 01: [Store Branches Test](./ts-patterns/tests/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/)
+
+- 02: [Market Service Test](./ts-patterns/tests/01-comportamentais/02-chain-of-responsibility/02-example-marketService/)
+
+</details>
