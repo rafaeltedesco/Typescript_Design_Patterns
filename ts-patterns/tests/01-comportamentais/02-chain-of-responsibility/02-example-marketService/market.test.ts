@@ -11,9 +11,10 @@ import {
   Snacks,
 } from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/unHealthyFoods";
 import Market from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/market";
+import MarketService from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/marketService";
 
 describe("Test Market", () => {
-  const market = new Market();
+  const market = new Market(new MarketService());
   const healthlyFoods = [
     new Apple(3),
     new OrangeJuice(4),
