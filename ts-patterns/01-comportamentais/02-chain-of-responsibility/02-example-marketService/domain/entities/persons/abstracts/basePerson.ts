@@ -28,11 +28,12 @@ abstract class BasePerson implements IPerson {
     return this._money;
   }
 
-  buy(food: IFood) {
-    if (!food.hasInStock()) return;
+  buy(food: IFood): boolean {
+    if (!food.hasInStock()) return false;
     food.sell();
     this._money -= food.price;
     this._boughtedFoods.push({ name: food.name, isHealthy: food.isHealthy });
+    return true;
   }
 
   protected hasEnoughMoney(food: IFood): boolean {
