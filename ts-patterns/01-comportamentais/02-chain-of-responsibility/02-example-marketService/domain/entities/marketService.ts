@@ -1,18 +1,17 @@
-import IFood from "../interfaces/ifood";
 import IPerson from "../interfaces/iperson";
 import Market from "./market";
 
 class MarketService {
-  private _availableFoods: IFood[] = [];
+  private market: Market;
 
-  defineFoodsToService(...foods: IFood[]) {
-    this._availableFoods = [...foods];
+  constructor(market: Market) {
+    this.market = market;
   }
 
-  start(person: IPerson, market: Market) {
-    this._availableFoods.forEach(food => {
+  start(person: IPerson) {
+    this.market.foods.forEach(food => {
       if (person.buy(food)) {
-        market.increaseBalance(food.price);
+        this.market.increaseBalance(food.price);
       }
     });
   }
