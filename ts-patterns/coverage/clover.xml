@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1666787488714" clover="3.2.0">
+  <project timestamp="1666787488714" name="All files">
+    <metrics statements="271" coveredstatements="271" conditionals="40" coveredconditionals="40" methods="107" coveredmethods="107" elements="418" coveredelements="418" complexity="0" loc="271" ncloc="271" packages="18" files="41" classes="41"/>
+    <package name="01-comportamentais.01-strategy.01-example-street-fighter">
+      <metrics statements="16" coveredstatements="16" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="7"/>
+      <file name="game.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/01-example-street-fighter/game.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="7"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="36" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="37" count="5" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.01-strategy.01-example-street-fighter.abstracts">
+      <metrics statements="26" coveredstatements="26" conditionals="1" coveredconditionals="1" methods="11" coveredmethods="11"/>
+      <file name="fightPlayer.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/01-example-street-fighter/abstracts/fightPlayer.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="4"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="16" count="21" type="stmt"/>
+        <line num="17" count="21" type="stmt"/>
+        <line num="18" count="21" type="stmt"/>
+        <line num="19" count="21" type="stmt"/>
+        <line num="23" count="11" type="stmt"/>
+        <line num="24" count="11" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="33" count="15" type="stmt"/>
+        <line num="34" count="15" type="cond" truecount="1" falsecount="0"/>
+        <line num="38" count="6" type="stmt"/>
+      </file>
+      <file name="narratorPlayer.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/01-example-street-fighter/abstracts/narratorPlayer.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="10" count="3" type="stmt"/>
+      </file>
+      <file name="player.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/01-example-street-fighter/abstracts/player.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="5" count="21" type="stmt"/>
+        <line num="7" count="21" type="stmt"/>
+        <line num="8" count="21" type="stmt"/>
+        <line num="11" count="21" type="stmt"/>
+        <line num="15" count="32" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="31" count="20" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="40" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.01-strategy.01-example-street-fighter.players">
+      <metrics statements="18" coveredstatements="18" conditionals="1" coveredconditionals="1" methods="5" coveredmethods="5"/>
+      <file name="akuma.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/01-example-street-fighter/players/akuma.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+      </file>
+      <file name="balrog.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/01-example-street-fighter/players/balrog.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+      </file>
+      <file name="narrator.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/01-example-street-fighter/players/narrator.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="8" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.01-strategy.01-example-street-fighter.players.attacks">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="akumaAttacks.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/01-example-street-fighter/players/attacks/akumaAttacks.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+      </file>
+      <file name="balrogAttacks.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/01-example-street-fighter/players/attacks/balrogAttacks.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.01-strategy.02-example-payment-methods.domain.entities">
+      <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+      <file name="account.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/02-example-payment-methods/domain/entities/account.ts">
+        <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+        <line num="4" count="16" type="stmt"/>
+        <line num="8" count="16" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="16" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="30" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="38" count="7" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.01-strategy.02-example-payment-methods.domain.strategies">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="doc.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/02-example-payment-methods/domain/strategies/doc.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="paymentSlip.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/02-example-payment-methods/domain/strategies/paymentSlip.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="ted.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/01-strategy/02-example-payment-methods/domain/strategies/ted.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.02-chain-of-responsibility.01-example-storeBranches.domain.abstracts">
+      <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="10"/>
+      <file name="baseStore.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/abstracts/baseStore.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="10"/>
+        <line num="6" count="16" type="stmt"/>
+        <line num="9" count="16" type="stmt"/>
+        <line num="10" count="16" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="44" count="7" type="stmt"/>
+        <line num="45" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.02-chain-of-responsibility.01-example-storeBranches.domain.entities">
+      <metrics statements="50" coveredstatements="50" conditionals="17" coveredconditionals="17" methods="19" coveredmethods="19"/>
+      <file name="buyer.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyer.ts">
+        <metrics statements="21" coveredstatements="21" conditionals="5" coveredconditionals="5" methods="10" coveredmethods="10"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="22" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="34" count="6" type="stmt"/>
+        <line num="35" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="40" count="5" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="48" count="4" type="stmt"/>
+        <line num="52" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
+        <line num="55" count="3" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="67" count="3" type="stmt"/>
+      </file>
+      <file name="clothingStore.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/clothingStore.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="11" type="stmt"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="19" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+      </file>
+      <file name="groceryStore.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/groceryStore.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="13" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="20" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+      </file>
+      <file name="megaStore.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/megaStore.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="12" count="9" type="cond" truecount="4" falsecount="0"/>
+        <line num="13" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.02-chain-of-responsibility.01-example-storeBranches.domain.entities.buyableProducts">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="BuyablepotatoChips.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyableProducts/BuyablepotatoChips.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+      </file>
+      <file name="BuyabletShirt.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/buyableProducts/BuyabletShirt.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.02-chain-of-responsibility.01-example-storeBranches.domain.entities.products">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="potatoChips.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/products/potatoChips.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+      </file>
+      <file name="tShirt.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/domain/entities/products/tShirt.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.02-chain-of-responsibility.02-example-marketService.domain.entities">
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
+      <file name="market.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/market.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+      </file>
+      <file name="marketService.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/marketService.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.02-chain-of-responsibility.02-example-marketService.domain.entities.foods">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+      <file name="baseFood.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/baseFood.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <line num="5" count="54" type="stmt"/>
+        <line num="6" count="54" type="stmt"/>
+        <line num="10" count="54" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="54" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="86" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="23" count="35" type="stmt"/>
+        <line num="27" count="43" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.02-chain-of-responsibility.02-example-marketService.domain.entities.foods.healthyFoods">
+      <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="apple.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthyFoods/apple.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+      </file>
+      <file name="broccoli.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthyFoods/broccoli.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthyFoods/index.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+      </file>
+      <file name="mango.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthyFoods/mango.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+      </file>
+      <file name="orangeJuice.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthyFoods/orangeJuice.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.02-chain-of-responsibility.02-example-marketService.domain.entities.foods.unHealthyFoods">
+      <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="frenchFries.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/unHealthyFoods/frenchFries.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+      </file>
+      <file name="hamburger.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/unHealthyFoods/hamburger.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/unHealthyFoods/index.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+      </file>
+      <file name="pizza.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/unHealthyFoods/pizza.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+      </file>
+      <file name="snacks.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/unHealthyFoods/snacks.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.02-chain-of-responsibility.02-example-marketService.domain.entities.persons">
+      <metrics statements="14" coveredstatements="14" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+      <file name="fitPerson.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/persons/fitPerson.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="6" count="37" type="cond" truecount="3" falsecount="0"/>
+        <line num="7" count="21" type="stmt"/>
+        <line num="8" count="21" type="stmt"/>
+        <line num="10" count="16" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="11" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+      </file>
+      <file name="nonFitPerson.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/persons/nonFitPerson.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="6" count="33" type="cond" truecount="3" falsecount="0"/>
+        <line num="7" count="22" type="stmt"/>
+        <line num="8" count="22" type="stmt"/>
+        <line num="10" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="01-comportamentais.02-chain-of-responsibility.02-example-marketService.domain.entities.persons.abstracts">
+      <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="9"/>
+      <file name="basePerson.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/persons/abstracts/basePerson.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="9"/>
+        <line num="6" count="18" type="stmt"/>
+        <line num="8" count="18" type="stmt"/>
+        <line num="11" count="18" type="stmt"/>
+        <line num="12" count="18" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="44" type="stmt"/>
+        <line num="20" count="27" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="28" count="8" type="stmt"/>
+        <line num="32" count="43" type="cond" truecount="1" falsecount="0"/>
+        <line num="33" count="35" type="stmt"/>
+        <line num="34" count="35" type="stmt"/>
+        <line num="35" count="35" type="stmt"/>
+        <line num="39" count="51" type="stmt"/>
+        <line num="43" count="17" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="51" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="tests.01-comportamentais.01-strategy.01-example-street-fighter.mocks">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="DumyMockAttack.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/tests/01-comportamentais/01-strategy/01-example-street-fighter/mocks/DumyMockAttack.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+      <file name="DumyMockFighter.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/tests/01-comportamentais/01-strategy/01-example-street-fighter/mocks/DumyMockFighter.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="jsonFileReader.ts" path="/Users/rafaeltedesco/Documents/patterns/ts-patterns/utils/jsonFileReader.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
