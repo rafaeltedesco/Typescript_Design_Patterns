@@ -65,16 +65,18 @@ No mais, boas vindas! Espero que acima de tudo se diverta durante o processo de 
 
 <summary> Strategy</summary>
 
-- 01: [streetFighterExample](./ts-patterns/01-comportamentais/01-strategy/01-example-street-fighter/)
+- 01: [Street Fighter StoryTeller Example](./ts-patterns/01-comportamentais/01-strategy/01-example-street-fighter/)
 
-- 02: [paymentMethodsExample](./ts-patterns/01-comportamentais/01-strategy/02-example-payment-methods/)
+- 02: [Payment Methods Example](./ts-patterns/01-comportamentais/01-strategy/02-example-payment-methods/)
 
 </details>
 
 <details>
 <summary> Chain Of Responsibility</summary>
 
-- 01: [storeBranchesExample](./ts-patterns/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/)
+- 01: [Store Branches Example](./ts-patterns/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches/)
+
+- 02: [Market Service Example](./ts-patterns/01-comportamentais/02-chain-of-responsibility/02-example-marketService/)
 
 </details>
 
@@ -82,4 +84,4 @@ No mais, boas vindas! Espero que acima de tudo se diverta durante o processo de 
 
 ### Code Coverage Atual
 
-![coverage](./ts-patterns/images/coverage.png)
+[coverage](./ts-patterns/coverage/lcov-report/index.html)
