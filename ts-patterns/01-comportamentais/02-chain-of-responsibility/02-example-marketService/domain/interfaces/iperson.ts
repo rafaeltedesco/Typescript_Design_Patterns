@@ -7,7 +7,7 @@ interface IPerson {
   boughtedFoods: FoodOutput[];
   next: IPerson | undefined;
   setNext(person: IPerson): void;
-  buy(food: IFood): void;
+  buy(food: IFood): boolean;
   hasNext(): boolean;
 }
 
