@@ -46,13 +46,14 @@ describe("Test Narrator", () => {
 
     it("should tell Balrog Story", async () => {
       const balrog = new Balrog();
-      reader.readJSONFile = jest.fn().mockResolvedValue({
-        story: `In his character story, F.A.N.G was impressed to see Balrog had found the bandaged boy from the S.I.N laboratory who is revealed to be Ed. F.A.N.G informs him about their plan(Operation C.H.A.I.N.S.) is now in full swing and to keep this information a secret. He also remarks that his actions are considered betrayal which causes Balrog to fight him. After the commotion, Balrog manages to knock F.A.N.G's hat off before retreating saying that he has work to do. When he calls Ed to come out, Ed manages to burn the hat into ashes. In China, Balrog and Ed meet up with Urien then Necalli confronts them in order to devour their souls. Urien tells Balrog to beat Necalli down for some reward money, which Balrog excitedly agrees as he fights off Necalli. When Necalli was defeated, he turns into dust. Urien pays him the reward and wants him to deliver the data of Operation C.H.A.I.N.S. in exchange for his service at Shadaloo. Balrog accepts the payment. Back at the Shadaloo Base, Ed remarks that Urien was more of a jerk. Balrog reveals that will bash his face once the job is done. Ed agrees to his plan as both he and Balrog walk away.`,
-        font: "mockedVersion",
-      });
-      const { story: balrogStory, font } = await reader.readJSONFile(
-        balrogStoryPath
-      );
+      reader.readJSONFile = jest.fn().mockResolvedValue([
+        {
+          CharacterStory: `In his character story, F.A.N.G was impressed to see Balrog had found the bandaged boy from the S.I.N laboratory who is revealed to be Ed. F.A.N.G informs him about their plan(Operation C.H.A.I.N.S.) is now in full swing and to keep this information a secret. He also remarks that his actions are considered betrayal which causes Balrog to fight him. After the commotion, Balrog manages to knock F.A.N.G's hat off before retreating saying that he has work to do. When he calls Ed to come out, Ed manages to burn the hat into ashes. In China, Balrog and Ed meet up with Urien then Necalli confronts them in order to devour their souls. Urien tells Balrog to beat Necalli down for some reward money, which Balrog excitedly agrees as he fights off Necalli. When Necalli was defeated, he turns into dust. Urien pays him the reward and wants him to deliver the data of Operation C.H.A.I.N.S. in exchange for his service at Shadaloo. Balrog accepts the payment. Back at the Shadaloo Base, Ed remarks that Urien was more of a jerk. Balrog reveals that will bash his face once the job is done. Ed agrees to his plan as both he and Balrog walk away.`,
+          site: "mockedVersion",
+        },
+      ]);
+      const [{ CharacterStory: balrogStory, site: font }] =
+        await reader.readJSONFile(balrogStoryPath);
       await narrator.askForStory(balrog);
       expect(narrator.tellStory()).toEqual(balrogStory);
       expect(font).toEqual("mockedVersion");
