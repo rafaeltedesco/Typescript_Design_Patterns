@@ -54,4 +54,8 @@ describe("Test Food", () => {
     ];
     expect(nonFitPerson.boughtedFoods).toEqual(expectedNonFit);
   });
+  it("should create a food with quantity", () => {
+    const food = new Apple(3, 10);
+    expect(food.quantity).toEqual(10);
+  });
 });
