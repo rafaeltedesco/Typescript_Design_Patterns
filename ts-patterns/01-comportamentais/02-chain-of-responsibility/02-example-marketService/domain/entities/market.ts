@@ -19,10 +19,13 @@ class Market {
     return [...this._foods];
   }
 
+  increaseBalance(value: number) {
+    this._balance += value;
+  }
+
   startService(personChain: IPerson) {
     this._marketService.defineFoodsToService(...this._foods);
-    const newBalance = this._marketService.start(personChain);
-    this._balance = newBalance;
+    this._marketService.start(personChain, this);
   }
 
   addFoods(...foods: IFood[]) {
