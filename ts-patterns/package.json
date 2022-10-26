@@ -6,6 +6,7 @@
   "scripts": {
     "start:street-fighter": "ts-node ./01-comportamentais/01-strategy/01-example-street-fighter/client.ts",
     "test:street-fighter": "npx jest tests/01-comportamentais/01-strategy/01-example-street-fighter",
+    "test:integration-street-fighter": "npx jest tests/01-comportamentais/01-strategy/01-example-street-fighter/integration",
     "start:payment-methods": "ts-node ./01-comportamentais/01-strategy/02-example-payment-methods/client.ts",
     "test:payment-methods": "npx jest tests/01-comportamentais/01-strategy/02-example-payment-methods",
     "test:store-branches": "npx jest tests/01-comportamentais/02-chain-of-responsibility/01-example-storeBranches",
