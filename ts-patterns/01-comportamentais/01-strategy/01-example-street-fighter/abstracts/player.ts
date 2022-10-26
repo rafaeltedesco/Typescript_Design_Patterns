@@ -1,4 +1,3 @@
-import reader from "../../../../utils/jsonFileReader";
 import IPlayer from "../interfaces/Iplayer";
 
 abstract class Player implements IPlayer {
@@ -31,10 +30,7 @@ abstract class Player implements IPlayer {
     this._storyPath = storyPath;
   }
 
-  async loadStory(): Promise<string> {
-    this.story = (await reader.readJSONFile(this.storyPath)).story;
-    return this.story;
-  }
+  abstract loadStory(): Promise<string>;
 }
 
 export default Player;
