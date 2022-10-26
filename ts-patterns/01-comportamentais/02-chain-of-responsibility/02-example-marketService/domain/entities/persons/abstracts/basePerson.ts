@@ -16,6 +16,10 @@ abstract class BasePerson implements IPerson {
     return this._next as IPerson;
   }
 
+  hasNext(): boolean {
+    return !!this.next;
+  }
+
   setNext(person: IPerson): void {
     this._next = person;
   }
