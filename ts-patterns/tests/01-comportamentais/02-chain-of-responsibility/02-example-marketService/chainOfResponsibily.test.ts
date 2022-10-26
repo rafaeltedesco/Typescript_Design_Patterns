@@ -18,7 +18,8 @@ import {
 
 describe("Test Chain Of Responsibility", () => {
   describe("Test when called by MarketService", () => {
-    const market = new Market(new MarketService());
+    const market = new Market();
+    const marketService = new MarketService(market);
     market.addFoods(new Hamburger(9));
     it("should FitPerson not buy and delegate to nonFitPerson that buys an Hamburger", () => {
       const fitPerson = new FitPerson("John Doe", 10);
@@ -28,13 +29,14 @@ describe("Test Chain Of Responsibility", () => {
 
       fitPerson.setNext(nonFitPerson);
 
-      market.startService(fitPerson);
+      marketService.start(fitPerson);
       expect(fitPerson.boughtedFoods).toEqual([]);
       expect(nonFitPerson.boughtedFoods).toEqual([expected]);
     });
   });
   describe("Test a full market service", () => {
-    const market = new Market(new MarketService());
+    const market = new Market();
+    const marketService = new MarketService(market);
     const healthlyFoods = [
       new Apple(9),
       new OrangeJuice(4),
@@ -98,7 +100,7 @@ describe("Test Chain Of Responsibility", () => {
 
       const chain = fitPerson1;
 
-      market.startService(chain);
+      marketService.start(chain);
 
       expect(fitPerson1.boughtedFoods).toEqual(fitPerson1FoodsExpected);
       expect(fitPerson1.money).toEqual(fitPerson1MoneyExpected);
