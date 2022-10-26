@@ -80,6 +80,6 @@ No mais, boas vindas! Espero que acima de tudo se diverta durante o processo de 
 
 </details>
 
---- 
+### Code Coverage Atual: 100%
 
-[Code Coverage Atual](./ts-patterns/coverage)
+[Confira todos os testes](./ts-patterns/tests/)
