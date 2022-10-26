@@ -21,7 +21,8 @@ class Market {
 
   startService(personChain: IPerson) {
     this._marketService.defineFoodsToService(...this._foods);
-    this._marketService.start(personChain);
+    const newBalance = this._marketService.start(personChain);
+    this._balance = newBalance;
   }
 
   addFoods(...foods: IFood[]) {
