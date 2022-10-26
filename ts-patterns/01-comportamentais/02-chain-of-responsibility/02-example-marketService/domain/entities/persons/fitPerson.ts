@@ -5,6 +5,10 @@ class FitPerson extends BasePerson {
   buy(food: IFood) {
     if (food.isHealthy && this.hasEnoughMoney(food)) {
       super.buy(food);
+      return;
+    }
+    if (this.hasNext()) {
+      this.next.buy(food);
     }
   }
 }
