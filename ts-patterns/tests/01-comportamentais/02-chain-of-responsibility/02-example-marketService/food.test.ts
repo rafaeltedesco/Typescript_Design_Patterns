@@ -3,7 +3,7 @@ import {
   Broccoli,
   Mango,
   OrangeJuice,
-} from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthlyFoods";
+} from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthyFoods";
 import {
   FrenchFries,
   Hamburger,

@@ -11,7 +11,7 @@ import {
   OrangeJuice,
   Mango,
   Apple,
-} from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthlyFoods";
+} from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/domain/entities/foods/healthyFoods";
 import FoodOutput from "../../../../01-comportamentais/02-chain-of-responsibility/02-example-marketService/types/foodOutput";
 
 describe("Test Non Fit Person", () => {
