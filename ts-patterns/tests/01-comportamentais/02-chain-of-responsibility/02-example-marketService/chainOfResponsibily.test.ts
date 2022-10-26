@@ -80,7 +80,7 @@ describe("Test Chain Of Responsibility", () => {
     ];
     const nonFitPerson3MoneyExpected = 1;
 
-    it("should person only buy a food that it likes and only if it has enoughMoney and food is still available otherwise it delegates to the next person", () => {
+    it("should person only buy a food that it likes and only if it has enoughMoney and food is still available otherwise it delegates to the next person. Market balance should be increased", () => {
       market.addFoods(...[...healthlyFoods, ...unHealthlyFoods]);
       const fitPerson1 = new FitPerson("Fit Person 1", 10);
       const fitPerson2 = new FitPerson("Fit Person 2", 30);
@@ -117,6 +117,8 @@ describe("Test Chain Of Responsibility", () => {
 
       expect(nonFitPerson3.boughtedFoods).toEqual(nonFitPerson3FoodsExpected);
       expect(nonFitPerson3.money).toEqual(nonFitPerson3MoneyExpected);
+
+      expect(market.balance).toEqual(64);
     });
   });
 });
