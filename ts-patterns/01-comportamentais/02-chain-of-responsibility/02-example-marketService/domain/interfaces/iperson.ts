@@ -8,6 +8,7 @@ interface IPerson {
   next: IPerson | undefined;
   setNext(person: IPerson): void;
   buy(food: IFood): void;
+  hasNext(): boolean;
 }
 
 export default IPerson;
