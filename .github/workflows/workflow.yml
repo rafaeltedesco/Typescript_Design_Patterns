@@ -8,6 +8,9 @@ on:
 
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: "ts-patterns"
 
     runs-on: ubuntu-latest
     steps:
@@ -17,5 +20,6 @@ jobs:
       with:
         node-version: 18.10.0
         cache: 'npm'
-    - run: npm ci --prefix ts-patterns
-    - run: npm test --prefix ts-patterns
+        cache-dependency-path: '**/package-lock.json"
+    - run: npm ci
+    - run: npm test
