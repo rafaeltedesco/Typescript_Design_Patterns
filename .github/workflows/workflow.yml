@@ -23,5 +23,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm test
+    - run: npm ci --prefix ts-patterns
+    - run: npm test --prefix ts-patterns
